@@ -9,35 +9,41 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+			
+					<?php echo get_the_post_thumbnail( $post->ID, 'large', array('class' => 'img-fluid') ); ?>
+							<span class="fs-16 fw-normal clr-text-light pt-4 d-block">
+								<i>
+									Published on 29 Dec 2021 / 1K views
+									<?php medplus_posted_on(); ?>
+								</i>
+								</span>
+					
+							<?php the_title( '<h3 class="fs-26 fw-semibold clr-text my-3">', '</h3>' ); ?>
+							<p class="fs-18 fw-normal">
+									<?php
+										the_content();
+										medplus_link_pages();
+									?>
+							</p>
+							<div class="blog--footer d-flex align-items-center pt-2">
+								<span class="fs-16 fw-normal clr-text-light d-flex align-items-center">
+									<img class="img-fluid pe-2" src="./assets/images/news-icon.png"
+										alt="mediPlus Blog Business">Blog, Business
+								</span>
+								<span class="fs-16 fw-normal clr-text-light d-flex align-items-center ps-5">
+									<img class="img-fluid pe-2" src="./assets/images/news-icon.png"
+										alt="mediPlus Blog News">Magazine, News
+								</span>
+						<footer class="entry-footer">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+							<?php 
+							// medplus_entry_footer(); 
+							?>
 
-		<div class="entry-meta">
+						</footer>.entry-footer
+				</article><!-- #post-## -->
 
-			<?php medplus_posted_on(); ?>
 
-		</div><!-- .entry-meta -->
-
-	</header><!-- .entry-header -->
-
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-
-	<div class="entry-content">
-
-		<?php
-		the_content();
-		medplus_link_pages();
-		?>
-
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-
-		<?php medplus_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
-
-</article><!-- #post-## -->
+				
