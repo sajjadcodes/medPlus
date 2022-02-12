@@ -49,7 +49,7 @@ $container = get_theme_mod( 'medplus_container_type' );
 					?>
 <!-- end custom logo -->
 					
-               <!-- <ul class="d-flex align-items-center m-0"> -->
+
                     
 
 							<!-- The WordPress Menu goes here -->
