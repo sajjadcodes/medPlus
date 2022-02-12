@@ -11,7 +11,7 @@ module.exports = ctx => {
       autoprefixer: {
         cascade: false
       },
-	  "postcss-medplus-palette-generator" : {
+	  "postcss-understrap-palette-generator" : {
 		colors: [
 			"--bs-blue",
 			"--bs-indigo",

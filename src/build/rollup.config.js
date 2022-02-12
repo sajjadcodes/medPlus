@@ -37,7 +37,7 @@ module.exports = {
     file: path.resolve(__dirname, `../../js/${fileDest}`),
     format: 'umd',
     globals,
-    name: 'medplus'
+    name: 'understrap'
   },
   external,
   plugins
