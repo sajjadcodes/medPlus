@@ -35,7 +35,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                         <div class="row g-4 row-cols-1 row-cols-md-4 g-2 g-md-4">
                           <div class="col col-lg-3 text-center">
                            <div class="service-card border rounded-20">
-                            <img class="img-fluid" src="./assets/images/orthodontics.png" alt="Our services">
+                            <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/orthodontics.png" alt="Our services">
                             <h2 class="fs-24 fw-semibold clr-text mt-3">Orthodontics</h2>
                             <p class="fs-16 fw-normal p-2">Dentistry, also known as Dental and Oral Medicine, is a
                                 branch of medicine that consists.</p>
@@ -43,7 +43,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                           </div>
                           <div class="col col-lg-3 text-center">
                             <div class="service-card border rounded-20"> 
-                                <img class="img-fluid" src="./assets/images/General Dentistry.png" alt="Our services">
+                                <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/General Dentistry.png" alt="Our services">
                                 <h2 class="fs-24 fw-semibold clr-text mt-3">General Dentistry</h2>
                                 <p class="fs-16 fw-normal p-2">Dentistry, also known as Dental and Oral Medicine, is a
                                     branch of medicine that consists.
@@ -52,7 +52,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                           </div>
                           <div class="col col-lg-3 text-center">
                             <div class="service-card border rounded-20">
-                                <img class="img-fluid" src="./assets/images/Dental-implant.png" alt="Our services">
+                                <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/Dental-implant.png" alt="Our services">
                                 <h2 class="fs-24 fw-semibold clr-text mt-3">Dental Implant</h2>
                                 <p class="fs-16 fw-normal p-2">Dentistry, also known as Dental and Oral Medicine, is a
                                     branch of medicine that consists.
@@ -61,7 +61,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                            </div>
                            <div class="col col-lg-3 text-center">
                             <div class="service-card border rounded-20">
-                                <img class="img-fluid" src="./assets/images/Gum-treatment.png" alt="Our services">
+                                <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/Gum-treatment.png" alt="Our services">
                                 <h2 class="fs-24 fw-semibold clr-text mt-3">Gum Treatment</h2>
                                 <p class="fs-16 fw-normal p-2">Dentistry, also known as Dental and Oral Medicine, is a
                                     branch of medicine that consists.
@@ -70,7 +70,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                            </div>
                            <div class="col col-lg-3 text-center">
                             <div class="service-card border rounded-20">
-                                <img class="img-fluid" src="./assets/images/kids-treatment.png" alt="Our services">
+                                <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/kids-treatment.png" alt="Our services">
                                 <h2 class="fs-24 fw-semibold clr-text mt-3">Kids treatment</h2>
                                 <p class="fs-16 fw-normal p-2">Dentistry, also known as Dental and Oral Medicine, is a
                                     branch of medicine that consists.
@@ -79,7 +79,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                            </div>
                            <div class="col col-lg-3 text-center">
                             <div class="service-card border rounded-20">
-                                <img class="img-fluid" src="./assets/images/teeth-whitening.png" alt="Our services">
+                                <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/teeth-whitening.png" alt="Our services">
                                 <h2 class="fs-24 fw-semibold clr-text mt-3">Teeth Whitening</h2>
                                 <p class="fs-16 fw-normal p-2">Dentistry, also known as Dental and Oral Medicine, is a
                                     branch of medicine that consists.

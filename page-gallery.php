@@ -69,38 +69,38 @@ $container = get_theme_mod( 'medplus_container_type' );
                                 <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
 
                                             <div class="col mb-4">
-                                                <a href="./assets/images/gallery-2.png" data-caption="Image caption">
-                                                    <img src="./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/gallery-1.png">
-                                                    <img src="./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="./assets/images/medical-2.png">
-                                                    <img src="./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                                             <div class="col mb-4">
-                                                <a href="./assets/images/service-5.png" data-caption="Image caption">
-                                                    <img src="./assets/images/service-5.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/medical-3.png">
-                                                    <img src="./assets/images/medical-3.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                                             <div class="col mb-4">
-                                                <a href="./assets/images/gallery-3.png" data-caption="Image caption">
-                                                    <img src="./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-5.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-5.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/treatment.png">
-                                                    <img src="./assets/images/treatment.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-3.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-3.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
+                                            </div>
+                                            <div class="col mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-3.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
+                                                </a>
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" alt="Second image" class="img-fluid mb-4">
+                                                </a>
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                        
@@ -113,35 +113,35 @@ $container = get_theme_mod( 'medplus_container_type' );
                                 <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
 
                                             <div class="col mb-4">
-                                                <a href="./assets/images/gallery-2.png" data-caption="Image caption">
-                                                    <img src="./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/gallery-1.png">
-                                                    <img src="./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="./assets/images/medical-2.png">
-                                                    <img src="./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                                             <div class="col mb-4">
-                                                <a href="./assets/images/service-1.png" data-caption="Image caption">
-                                                    <img src="./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/service-2.png">
-                                                    <img src="./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                                             <div class="col mb-4">
-                                                <a href="./assets/images/treatment.png" data-caption="Image caption">
-                                                    <img src="./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/medical-2.png">
-                                                    <img src="./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
+                                                </a>
+                                            </div>
+                                            <div class="col mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
+                                                </a>
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                        
@@ -154,35 +154,35 @@ $container = get_theme_mod( 'medplus_container_type' );
                                 <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
 
                                             <div class="col mb-4">
-                                                <a href="./assets/images/gallery-2.png" data-caption="Image caption">
-                                                    <img src="./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/gallery-1.png">
-                                                    <img src="./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="./assets/images/medical-2.png">
-                                                    <img src="./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                                             <div class="col mb-4">
-                                                <a href="./assets/images/service-1.png" data-caption="Image caption">
-                                                    <img src="./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/service-2.png">
-                                                    <img src="./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                                             <div class="col mb-4">
-                                                <a href="./assets/images/treatment.png" data-caption="Image caption">
-                                                    <img src="./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/medical-2.png">
-                                                    <img src="./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
+                                                </a>
+                                            </div>
+                                            <div class="col mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
+                                                </a>
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                        
@@ -195,35 +195,35 @@ $container = get_theme_mod( 'medplus_container_type' );
                                 <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
 
                                             <div class="col mb-4">
-                                                <a href="./assets/images/gallery-2.png" data-caption="Image caption">
-                                                    <img src="./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/gallery-1.png">
-                                                    <img src="./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="./assets/images/medical-2.png">
-                                                    <img src="./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                                             <div class="col mb-4">
-                                                <a href="./assets/images/service-1.png" data-caption="Image caption">
-                                                    <img src="./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/service-2.png">
-                                                    <img src="./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                                             <div class="col mb-4">
-                                                <a href="./assets/images/treatment.png" data-caption="Image caption">
-                                                    <img src="./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/medical-2.png">
-                                                    <img src="./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
+                                                </a>
+                                            </div>
+                                            <div class="col mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
+                                                </a>
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                        
@@ -236,35 +236,35 @@ $container = get_theme_mod( 'medplus_container_type' );
                                 <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
 
                                             <div class="col mb-4">
-                                                <a href="./assets/images/gallery-2.png" data-caption="Image caption">
-                                                    <img src="./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/gallery-1.png">
-                                                    <img src="./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="./assets/images/medical-2.png">
-                                                    <img src="./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                                             <div class="col mb-4">
-                                                <a href="./assets/images/service-1.png" data-caption="Image caption">
-                                                    <img src="./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/service-2.png">
-                                                    <img src="./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                                             <div class="col mb-4">
-                                                <a href="./assets/images/treatment.png" data-caption="Image caption">
-                                                    <img src="./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
                                                 </a>
-                                                <a href="./assets/images/medical-2.png">
-                                                    <img src="./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
+                                                </a>
+                                            </div>
+                                            <div class="col mb-4">
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" data-caption="Image caption">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
+                                                </a>
+                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
+                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
                                                 </a>
                                             </div>
                        
@@ -289,7 +289,7 @@ $container = get_theme_mod( 'medplus_container_type' );
 
 
 
-    <script src="./assets/js/baguetteBox.min.js" async></script>
+    <script src="<?php echo get_template_directory_uri() ?>./assets/js/baguetteBox.min.js" async></script>
  
     <script>
         window.addEventListener('load', function() {

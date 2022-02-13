@@ -52,7 +52,7 @@ defined( 'ABSPATH' ) || exit;
 							   <div class="blog--footer d-flex align-items-center pt-2">
 
 										<span class="fs-16 fw-normal clr-text-light d-flex align-items-center">
-											<img class="img-fluid pe-2" src="./assets/images/news-icon.png" alt="mediPlus Blog Business">
+											<img class="img-fluid pe-2" src="<?php get_theme_file_path_uri(); ?>"./assets/images/news-icon.png" alt="mediPlus Blog Business">
 											Blog, Business
 										</span>
 										<span class="fs-16 fw-normal clr-text-light d-flex align-items-center ps-5">

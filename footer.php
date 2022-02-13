@@ -23,17 +23,17 @@ $container = get_theme_mod( 'medplus_container_type' );
                 <!-- Info & Contact (Footer) -->
                 <div class="col-md-4">
                     <address>
-                        <a href="#"><img class="img-fluid pb-4" src="./assets/images/mediplus-Logo-white.png"
+                        <a href="#"><img class="img-fluid pb-4" src="<?php echo get_template_directory_uri() ?>./assets/images/mediplus-Logo-white.png"
                                 alt="MediPlus Logo"></a>
                         <ul class="text-white fs-18 ps-3">
                             <li class="d-flex align-items-start py-2">
-                                <img class="img-fluid pe-3" src="./assets/images/Pin-Icon.png"
+                                <img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/Pin-Icon.png"
                                     alt="Pin Location Mediplus">
                                 <span>10 Mohamad Mahmoud Ezzat Al-Nozha, Cairo, Egypt</span>
                             </li>
-                            <li class="py-2"><img class="img-fluid pe-3" src="./assets/images/Phone-Icon.png"
+                            <li class="py-2"><img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/Phone-Icon.png"
                                     alt="Phone contact Mediplus">+201205896314</li>
-                            <li class="py-2"><img class="img-fluid pe-3" src="./assets/images/Email-Icon.png"
+                            <li class="py-2"><img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/Email-Icon.png"
                                     alt="Email Mediplus">contact@medplus.com</li>
                         </ul>
                     </address>
@@ -69,21 +69,21 @@ $container = get_theme_mod( 'medplus_container_type' );
                     <h4 class="fs-20 fw-normal text-white">Working Hours</h4>
                     <time class="py-2 d-flex align-items-center justify-content-between">
                         <span class="d-flex align-items-center">
-                            <img class="img-fluid pe-3" src="./assets/images/clock.png" alt="Phone contact Mediplus">
+                            <img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/clock.png" alt="Phone contact Mediplus">
                             <p class="fs-18 fw-normal m-0">+Monday - Friday</p>
                         </span>
                         <p class="fs-18 fw-normal m-0">8:00 - 5:00</p>
                     </time>
                     <time class="py-2 d-flex align-items-center justify-content-between">
                         <span class="d-flex align-items-center">
-                            <img class="img-fluid pe-3" src="./assets/images/clock.png" alt="Phone contact Mediplus">
+                            <img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/clock.png" alt="Phone contact Mediplus">
                             <p class="fs-18 fw-normal m-0">+Saturday</p>
                         </span>
                         <p class="fs-18 fw-normal m-0">9:00 - 4:00</p>
                     </time>
                     <time class="py-2 d-flex align-items-center justify-content-between">
                         <span class="d-flex align-items-center">
-                            <img class="img-fluid pe-3" src="./assets/images/clock.png" alt="Phone contact Mediplus">
+                            <img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/clock.png" alt="Phone contact Mediplus">
                             <p class="fs-18 fw-normal m-0">+Sunday</p>
                         </span>
                         <p class="fs-18 fw-normal m-0">9:00 - 4:00</p>

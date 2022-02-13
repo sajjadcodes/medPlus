@@ -25,7 +25,7 @@ $container = get_theme_mod( 'medplus_container_type' );
 
         <main>
 
-                <section class="hero" id="startchange" >
+                <section class="hero" id="startchange" style="background-image: url(<?php echo get_template_directory_uri() ?>./assets/images/Banner\ Mask.png)" >
                         <div class="overlay"></div>
                         <div class="container">
                             <div class="caption d-flex align-items-start flex-column justify-content-center">
@@ -34,11 +34,11 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     Your Health</h1>
                                 <a class="fs-20 fw-semibold text-white text-decoration-underline pb-4 text-center d-lg-none d-block w-100"
                                     style="z-index: 9;" href="#" type="button">View All</a>
-                                <form class="d-lg-flex d-none gap-5">
-                                    <button class="button button--state-active btn-lg fs-26 fw-medium shadow" type="submit" data-aos="fade-left">Our
-                                        Services</button>
-                                    <button class="button btn-lg fs-26 fw-medium shadow" type="submit" data-aos="fade-down">View Our Doctors</button>
-                                </form>
+                                <div class="d-lg-flex d-none gap-5">
+                                    <a  href="<?php echo home_url('/services') ?>" class="button button--state-active btn-lg fs-26 fw-medium shadow"  data-aos="fade-left">Our
+                                        Services</a>
+                                        <a  href="<?php echo home_url('/medical-specialities') ?>" class="button btn-lg fs-26 fw-medium shadow"  data-aos="fade-down">View Our Doctors</a>
+                                </div>
                             </div>
                         </div>
                 </section>
@@ -48,17 +48,17 @@ $container = get_theme_mod( 'medplus_container_type' );
                         <div class="d-md-grid gap-4 d-md-flex justify-content-center">
                             <button class="clr-text fs-20 py-3 fw-semibold w-28 rounded-20 shadow border bg-white"
                                 type="button"  data-aos="fade-up">
-                                <img class="img-fluid me-1" src="./assets/images/CapIcon.png" alt="Highly Trained Dentists">
+                                <img class="img-fluid me-1" src="<?php echo get_template_directory_uri() ?>./assets/images/CapIcon.png" alt="Highly Trained Dentists">
                                 Highly Trained Dentists
                             </button>
                             <button class="clr-text fs-20 py-3 fw-semibold w-28 rounded-20 shadow border bg-white"
                                 type="button"  data-aos="fade-up">
-                                <img class="img-fluid me-1" src="./assets/images/MedalIcon.png" alt="Experienced Doctors">
+                                <img class="img-fluid me-1" src="<?php echo get_template_directory_uri() ?>./assets/images/MedalIcon.png" alt="Experienced Doctors">
                                 Experienced Doctors
                             </button>
                             <button class="clr-text fs-20 py-3 fw-semibold w-28 rounded-20 shadow border bg-white"
                                 type="button"  data-aos="fade-up">
-                                <img class="img-fluid me-1" src="./assets/images/CapIcon.png" alt="Highly Trained Dentists">
+                                <img class="img-fluid me-1" src="<?php echo get_template_directory_uri() ?>./assets/images/CapIcon.png" alt="Highly Trained Dentists">
                                 Highly Trained Dentists
                             </button>
                         </div>
@@ -84,7 +84,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     <button
                                         class="btn-slider clr-text fs-20 fw-semibold w-100 rounded-20 shadow border bg-white"
                                         type="button">
-                                        <img class="img-fluid me-4" src="./assets/images/CapIcon.png"
+                                        <img class="img-fluid me-4" src="<?php echo get_template_directory_uri() ?>./assets/images/CapIcon.png"
                                             alt="Highly Trained Dentists">
                                         Highly Trained Dentists
                                     </button>
@@ -98,7 +98,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     <button
                                         class="btn-slider clr-text fs-20 fw-semibold w-100 rounded-20 shadow border bg-white"
                                         type="button">
-                                        <img class="img-fluid me-4" src="./assets/images/MedalIcon.png"
+                                        <img class="img-fluid me-4" src="<?php echo get_template_directory_uri() ?>./assets/images/MedalIcon.png"
                                             alt="Experienced Doctors">
                                         Experienced Doctors
                                     </button>
@@ -112,7 +112,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     <button
                                         class="btn-slider clr-text fs-20 fw-semibold w-100 rounded-20 shadow border bg-white"
                                         type="button">
-                                        <img class="img-fluid me-4" src="./assets/images/CapIcon.png"
+                                        <img class="img-fluid me-4" src="<?php echo get_template_directory_uri() ?>./assets/images/CapIcon.png"
                                             alt="Highly Trained Dentists">
                                         Highly Trained Dentists
                                     </button>
@@ -134,7 +134,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in-up">
                                         <span class="outer-circle rounded-circle">
                                             <span class="inner-circle rounded-circle">
-                                                <img src="assets/images/Image-Mask.png">
+                                                <img src="<?php echo get_template_directory_uri() ?>./assets/images/Image-Mask.png">
                                             </span>
                                         </span>
                                     </div>
@@ -163,7 +163,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     <div class="col-lg-6 d-flex justify-content-center">
                                         <span class="outer-circle rounded-circle">
                                             <span class="inner-circle rounded-circle">
-                                                <img src="assets/images/Image-Mask.png">
+                                                <img src="<?php echo get_template_directory_uri() ?>./assets/images/Image-Mask.png">
                                             </span>
                                         </span>
                                     </div>
@@ -192,7 +192,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     <div class="col-lg-6 d-flex justify-content-center">
                                         <span class="outer-circle rounded-circle">
                                             <span class="inner-circle rounded-circle">
-                                                <img src="assets/images/Image-Mask.png">
+                                                <img src="<?php echo get_template_directory_uri() ?>./assets/images/Image-Mask.png">
                                             </span>
                                         </span>
                                     </div>
@@ -239,7 +239,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                 Ipsum has been the the 1500s,ining It was popularised in the 1960s w</p>
                             <a class="fs-20 fw-semibold clr-text text-decoration-underline pb-4" data-aos="fade-up" href="#" type="button">View
                                 All</a>
-                            <img class="img-fluid" data-aos="fade-right" src="./assets/images/treatment.png" alt="Before & After Treatment">
+                            <img class="img-fluid" data-aos="fade-right" src="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" alt="Before & After Treatment">
                         </div>
                     </div>
                 </section>
@@ -287,10 +287,10 @@ $container = get_theme_mod( 'medplus_container_type' );
                                         <tr>
                                             <th colspan="7">
                                                 <span class="btn-group d-flex justify-content-between py-4">
-                                                    <a class="btn"><img class="img-fluid" src="./assets/images/arrow-left.png"
+                                                    <a class="btn"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/arrow-left.png"
                                                             alt="arrow calander left"></i></a>
                                                     <h4 class="fs-26 fw-semibold">December 2022</h4>
-                                                    <a class="btn"><img class="img-fluid" src="./assets/images/arrow-right.png"
+                                                    <a class="btn"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/arrow-right.png"
                                                             alt="arrow calander left"></i></a>
                                                 </span>
                                             </th>
@@ -409,11 +409,11 @@ $container = get_theme_mod( 'medplus_container_type' );
                             <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-6 d-flex justify-content-between flex-column">
-                                        <img class="img-fluid" src="./assets/images/medical-1.png" alt="About mediPlus" data-aos="fade-right">
-                                        <img class="img-fluid" src="./assets/images/medical-2.png" alt="About mediPlus" data-aos="fade-left">
+                                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="About mediPlus" data-aos="fade-right">
+                                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="About mediPlus" data-aos="fade-left">
                                     </div>
                                     <div class="col-6">
-                                        <img class="img-fluid" src="./assets/images/medical-3.png" alt="About mediPlus" data-aos="fade-right">
+                                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/medical-3.png" alt="About mediPlus" data-aos="fade-right">
                                     </div>
                                 </div>
                             </div>
@@ -436,13 +436,13 @@ $container = get_theme_mod( 'medplus_container_type' );
                                 <div class="testimonial__caption shadow border bg-white p-3 rounded-20 my-4 me-2">
                                     <div class="d-flex justify-content-between align-items-baseline pb-4">
                                         <div class="d-flex align-items-center">
-                                            <img src="./assets/images/testimonilal-1.png" alt="Testimonial Card">
+                                            <img src="<?php echo get_template_directory_uri() ?>./assets/images/testimonilal-1.png" alt="Testimonial Card">
                                             <span class="testimonial__title ps-3">
                                                 <h3 class="fs-20 fw-medium m-0">Passant Mohamed</h3>
                                                 <small class="fs-16 fst-italic clr-text-light">28 December 2021</small>
                                             </span>
                                         </div>
-                                        <img class="img-fluid" src="./assets/images/Stars.png" alt="Customer Rating">
+                                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/Stars.png" alt="Customer Rating">
                                     </div>
                                     <p class="fs-16 fw-normal m-0">My son 9 years old had supernumerary tooth in the palate many
                                         doctors said very difficult to be removed Dr. Basem Samir did it in less than 15mins
@@ -454,13 +454,13 @@ $container = get_theme_mod( 'medplus_container_type' );
                                 <div class="testimonial__caption shadow border bg-white p-3 rounded-20 my-4 me-2">
                                     <div class="d-flex justify-content-between align-items-baseline pb-4">
                                         <div class="d-flex align-items-center">
-                                            <img src="./assets/images/testimonilal-1.png" alt="Testimonial Card">
+                                            <img src="<?php echo get_template_directory_uri() ?>./assets/images/testimonilal-1.png" alt="Testimonial Card">
                                             <span class="testimonial__title ps-3">
                                                 <h3 class="fs-20 fw-medium m-0">Passant Mohamed</h3>
                                                 <small class="fs-16 fst-italic clr-text-light">28 December 2021</small>
                                             </span>
                                         </div>
-                                        <img class="img-fluid" src="./assets/images/Stars.png" alt="Customer Rating">
+                                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/Stars.png" alt="Customer Rating">
                                     </div>
                                     <p class="fs-16 fw-normal m-0">My son 9 years old had supernumerary tooth in the palate many
                                         doctors said very difficult to be removed Dr. Basem Samir did it in less than 15mins
@@ -472,13 +472,13 @@ $container = get_theme_mod( 'medplus_container_type' );
                                 <div class="testimonial__caption shadow border bg-white p-3 rounded-20 my-4 me-2">
                                     <div class="d-flex justify-content-between align-items-baseline pb-4">
                                         <div class="d-flex align-items-center">
-                                            <img src="./assets/images/testimonilal-1.png" alt="Testimonial Card">
+                                            <img src="<?php echo get_template_directory_uri() ?>./assets/images/testimonilal-1.png" alt="Testimonial Card">
                                             <span class="testimonial__title ps-3">
                                                 <h3 class="fs-20 fw-medium m-0">Passant Mohamed</h3>
                                                 <small class="fs-16 fst-italic clr-text-light">28 December 2021</small>
                                             </span>
                                         </div>
-                                        <img class="img-fluid" src="./assets/images/Stars.png" alt="Customer Rating">
+                                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/Stars.png" alt="Customer Rating">
                                     </div>
                                     <p class="fs-16 fw-normal m-0">My son 9 years old had supernumerary tooth in the palate many
                                         doctors said very difficult to be removed Dr. Basem Samir did it in less than 15mins
@@ -496,6 +496,31 @@ $container = get_theme_mod( 'medplus_container_type' );
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </section>
         </main>
+
+    <script src="<?php echo get_template_directory_uri()?>./assets/js/aos.js"></script>
+    <script src="<?php echo get_template_directory_uri()?>./assets/js/slick.min.js"></script>
+
+    <script>
+        AOS.init();
+
+
+        $('.testimonial__slider').slick({
+
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: false,
+            arrows: false,
+            dots: false,
+            responsive: [{
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
+            });
+    </script>
 
 <?php
 get_footer();
