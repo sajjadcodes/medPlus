@@ -45,6 +45,16 @@ $container = get_theme_mod( 'medplus_container_type' );
 							<?php
 							} else {
 							the_custom_logo();
+                            ?>
+                                   <!-- <a class="navbar-brand logo-static" href="./home.html">
+                                <img class="img-fluid" src="./assets/images/Medplus-Logo.png" alt="Med Logo">
+                                     </a> -->
+                             <a class="navbar-brand logo-sticky" href="./home.html">
+                            <img class="img-fluid" src="<?php echo get_theme_mod( 'medplus_theme_sticky_logo' ) ?>" alt="Med Logo">
+                             
+                            </a>
+
+                                <?php
 							}
 					?>
 <!-- end custom logo -->

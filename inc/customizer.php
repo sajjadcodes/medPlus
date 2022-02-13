@@ -35,6 +35,20 @@ if ( ! function_exists( 'medplus_theme_customize_register' ) ) {
 	 */
 	function medplus_theme_customize_register( $wp_customize ) {
 
+
+		// secondary logo
+
+		// add a setting 
+		$wp_customize->add_setting('your_theme_hover_logo');
+		// Add a control to upload the hover logo
+			$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'your_theme_sticky_logo', array(
+				'label' => 'Upload sticky Logo',
+				'section' => 'title_tagline', //this is the section where the custom-logo from WordPress is
+				'settings' => 'medplus_theme_sticky_logo',
+				'priority' => 8 // show it just below the custom-logo
+			)));
+	
+
 		// Theme layout settings.
 		$wp_customize->add_section(
 			'medplus_theme_layout_options',
