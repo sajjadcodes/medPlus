@@ -39,9 +39,9 @@ if ( ! function_exists( 'medplus_theme_customize_register' ) ) {
 		// secondary logo
 
 		// add a setting 
-		$wp_customize->add_setting('your_theme_hover_logo');
+		$wp_customize->add_setting('medplus_theme_sticky_logo');
 		// Add a control to upload the hover logo
-			$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'your_theme_sticky_logo', array(
+			$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'medplus_theme_sticky_logo', array(
 				'label' => 'Upload sticky Logo',
 				'section' => 'title_tagline', //this is the section where the custom-logo from WordPress is
 				'settings' => 'medplus_theme_sticky_logo',
@@ -79,6 +79,8 @@ if ( ! function_exists( 'medplus_theme_customize_register' ) ) {
 			return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 
 		}
+
+		$wp_customize->get_section('static_front_page')->priority = 2;
 
 		$wp_customize->add_setting(
 			'medplus_bootstrap_version',

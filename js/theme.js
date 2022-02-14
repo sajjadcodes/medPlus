@@ -9927,35 +9927,35 @@
 
 	      if (scroll_start > offset.top) {
 	        $__default["default"](".navbar").css('background-color', '#0f223c');
-	        $__default["default"](".nav-item a").css('color', '#FFFF');
+	        $__default["default"](".nav-link").css('color', '#FFFF');
 	        $__default["default"]('.active').css("border-bottom-color", "#fff");
 	        $__default["default"]('.logo-static').hide();
 	        $__default["default"]('.logo-sticky').show();
 	      } else {
 	        $__default["default"]('.navbar').css('background-color', 'transparent');
-	        $__default["default"](".nav-item a").css('color', '#0f223c');
+	        $__default["default"](".nav-link").css('color', '#0f223c');
 	        $__default["default"]('.active').css("border-bottom-color", "transparent");
 	        $__default["default"]('.logo-static').show();
 	        $__default["default"]('.logo-sticky').hide();
 	      }
 	    });
 	  }
-	});
-	$__default["default"]('.testimonial__slider').slick({
-	  speed: 300,
-	  slidesToShow: 2,
-	  slidesToScroll: 1,
-	  autoplay: false,
-	  arrows: false,
-	  dots: false,
-	  responsive: [{
-	    breakpoint: 900,
-	    settings: {
-	      slidesToShow: 1,
-	      slidesToScroll: 1
-	    }
-	  }]
-	});
+	}); // $('.testimonial__slider').slick({
+	//     speed: 300,
+	//     slidesToShow: 2,
+	//     slidesToScroll: 1,
+	//     autoplay: false,
+	//     arrows: false,
+	//     dots: false,
+	//     responsive: [{
+	//         breakpoint: 900,
+	//         settings: {
+	//             slidesToShow: 1,
+	//             slidesToScroll: 1
+	//         }
+	//     }]
+	// });
+
 	AOS.init(); //mySidenav
 
 	exports.Alert = alert$1;

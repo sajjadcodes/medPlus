@@ -36,9 +36,14 @@ defined( 'ABSPATH' ) || exit;
 
                         <?php
                         } else {
-                        the_custom_logo();
+                            ?>
+                            <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                            <img class="img-fluid" src="<?php echo get_theme_mod( 'medplus_theme_sticky_logo' ) ?>" alt="Med Logo">
+                             
+                            </a>
+                    <?php
                         }
-                        ?>
+                    ?>
                         <!-- end custom logo -->
 
 

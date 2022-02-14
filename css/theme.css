@@ -15954,6 +15954,10 @@ li > a:hover {
   border-bottom: 2px solid #1476E1;
 }
 
+.nav-link {
+  color: #0F223C;
+}
+
 /* Utilities (color's)  */
 .bg-clr {
   background-color: #1476E1;
@@ -16289,10 +16293,6 @@ li > a:hover {
     right: 0px;
   }
 }
-.nav-link {
-  color: white !important;
-}
-
 @media (max-width: 768px) {
   .ms-n3 {
     margin: 0px;
@@ -16343,9 +16343,6 @@ li > a:hover {
   .staff__slider .carousel-control-next {
     top: -123px;
   }
-}
-.nav-link {
-  color: white !important;
 }
 
 /*# sourceMappingURL=theme.css.map */

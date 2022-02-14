@@ -43,3 +43,74 @@ if ( class_exists( 'Jetpack' ) ) {
 foreach ( $medplus_includes as $file ) {
 	require_once get_theme_file_path( $medplus_inc_dir . $file );
 }
+
+
+
+
+// Custom Post Type for Service Template
+
+
+
+
+// Register Custom Post Type Service
+
+
+// Register Custom Post Type Service
+
+// Register Custom Post Type Service
+function create_service_cpt() {
+
+	$labels = array(
+		'name' => _x( 'Services', 'Post Type General Name', 'medplus' ),
+		'singular_name' => _x( 'Service', 'Post Type Singular Name', 'medplus' ),
+		'menu_name' => _x( 'Services', 'Admin Menu text', 'medplus' ),
+		'name_admin_bar' => _x( 'Service', 'Add New on Toolbar', 'medplus' ),
+		'archives' => __( 'Service Archives', 'medplus' ),
+		'attributes' => __( 'Service Attributes', 'medplus' ),
+		'parent_item_colon' => __( 'Parent Service:', 'medplus' ),
+		'all_items' => __( 'All Services', 'medplus' ),
+		'add_new_item' => __( 'Add New Service', 'medplus' ),
+		'add_new' => __( 'Add New', 'medplus' ),
+		'new_item' => __( 'New Service', 'medplus' ),
+		'edit_item' => __( 'Edit Service', 'medplus' ),
+		'update_item' => __( 'Update Service', 'medplus' ),
+		'view_item' => __( 'View Service', 'medplus' ),
+		'view_items' => __( 'View Services', 'medplus' ),
+		'search_items' => __( 'Search Service', 'medplus' ),
+		'not_found' => __( 'Not found', 'medplus' ),
+		'not_found_in_trash' => __( 'Not found in Trash', 'medplus' ),
+		'featured_image' => __( 'Featured Image', 'medplus' ),
+		'set_featured_image' => __( 'Set featured image', 'medplus' ),
+		'remove_featured_image' => __( 'Remove featured image', 'medplus' ),
+		'use_featured_image' => __( 'Use as featured image', 'medplus' ),
+		'insert_into_item' => __( 'Insert into Service', 'medplus' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Service', 'medplus' ),
+		'items_list' => __( 'Services list', 'medplus' ),
+		'items_list_navigation' => __( 'Services list navigation', 'medplus' ),
+		'filter_items_list' => __( 'Filter Services list', 'medplus' ),
+	);
+	$args = array(
+		'label' => __( 'Service', 'medplus' ),
+		'description' => __( '', 'medplus' ),
+		'labels' => $labels,
+		'menu_icon' => 'dashicons-businessman',
+		'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+		'taxonomies' => array(),
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'menu_position' => 5,
+		'show_in_admin_bar' => true,
+		'show_in_nav_menus' => true,
+		'can_export' => true,
+		'has_archive' => true,
+		'hierarchical' => false,
+		'exclude_from_search' => false,
+		'show_in_rest' => true,
+		'publicly_queryable' => true,
+		'capability_type' => 'post',
+	);
+	register_post_type( 'service', $args );
+
+}
+add_action( 'init', 'create_service_cpt', 0 );

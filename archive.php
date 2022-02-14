@@ -12,6 +12,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header('secondary');
 
+
 $container = get_theme_mod( 'medplus_container_type' );
 ?>
 
