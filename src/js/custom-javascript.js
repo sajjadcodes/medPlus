@@ -3,34 +3,13 @@ import $ from "jquery"
 
 // Our modules / classes
 import AOS from "./aos"
-// import HeroSlider from "./modules/HeroSlider"
-// import GoogleMap from "./modules/GoogleMap";
-// import Search from "./modules/search";
-
-
-
-// Instantiate a new object using our modules/classes
-// const mobileMenu = new MobileMenu()
-// const heroSlider = new HeroSlider()
 
 AOS.init();
-
-alert("test for custom js file");
-// Add your JS customizations here
-$(document).ready(function(){
-    if (jQuery) {  
-      // jQuery is loaded  
-      alert("Yeah!");
-    } else {
-      // jQuery is not loaded
-      alert("Doesn't Work");
-    }
-});
 
 
 $(document).ready(function(){ 
 
-    alert("document ready in test.js file ................");
+
 
     // active and inactive menu items
     $('ul li a').click(function(){
@@ -86,8 +65,6 @@ $(document).ready(function(){
 //         }
 //     }]
 // });
-
-AOS.init();
 
 
 

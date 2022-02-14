@@ -9889,27 +9889,9 @@
 
 	var AOS = /*@__PURE__*/getDefaultExportFromCjs(aos.exports);
 
-	// import GoogleMap from "./modules/GoogleMap";
-	// import Search from "./modules/search";
-	// Instantiate a new object using our modules/classes
-	// const mobileMenu = new MobileMenu()
-	// const heroSlider = new HeroSlider()
-
 	AOS.init();
-	alert("test for custom js file"); // Add your JS customizations here
-
 	$__default["default"](document).ready(function () {
-	  if (jQuery) {
-	    // jQuery is loaded  
-	    alert("Yeah!");
-	  } else {
-	    // jQuery is not loaded
-	    alert("Doesn't Work");
-	  }
-	});
-	$__default["default"](document).ready(function () {
-	  alert("document ready in test.js file ................"); // active and inactive menu items
-
+	  // active and inactive menu items
 	  $__default["default"]('ul li a').click(function () {
 	    alert("menu click");
 	    $__default["default"]('.active').css("border-bottom-color", "#fff");
@@ -9941,22 +9923,6 @@
 	    });
 	  }
 	}); // $('.testimonial__slider').slick({
-	//     speed: 300,
-	//     slidesToShow: 2,
-	//     slidesToScroll: 1,
-	//     autoplay: false,
-	//     arrows: false,
-	//     dots: false,
-	//     responsive: [{
-	//         breakpoint: 900,
-	//         settings: {
-	//             slidesToShow: 1,
-	//             slidesToScroll: 1
-	//         }
-	//     }]
-	// });
-
-	AOS.init(); //mySidenav
 
 	exports.Alert = alert$1;
 	exports.Button = button;
