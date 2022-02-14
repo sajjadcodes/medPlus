@@ -24,8 +24,8 @@ $container = get_theme_mod( 'medplus_container_type' );
             <div class="container">
                 <!-- Our services (head) -->
                 <article class="text-center">
-                    <h2 class="fs-24 fw-bold feature__caption--line">Our Services</h2>
-                    <?php the_archive_title( '<h2 class="fs-24 fw-bold feature__caption--line">', '</h1>' ); ?>
+     
+                    <h2 class="fs-24 fw-bold feature__caption--line"><?php echo post_type_archive_title( '', false );?></h2>
                     <p class="w-50 fs-18 fw-normal mx-auto">Lorem Ipsum is simply dummy text of the pritting industry.
                         Lorem
                         Ipsum has been the the 1500s,ining It was popularised in the 1960s w</p>
@@ -55,10 +55,9 @@ $container = get_theme_mod( 'medplus_container_type' );
                             <img class="img-fluid" src="<?php the_post_thumbnail_url(  );?>" alt="Our services">
                            
                             <h2 class="fs-24 fw-semibold clr-text mt-3"><?php the_title();?></h2>
-                            <p class="fs-16 fw-normal p-2">
-                             
-                             <?php the_content(); ?>
-                            </p>
+                                <div class="fs-16 fw-normal p-2">
+                                <?php the_content(); ?>
+                                </div>
                            </div>
                           </div>
 				<?php
