@@ -29,12 +29,12 @@ $container = get_theme_mod( 'medplus_container_type' );
                             <li class="d-flex align-items-start py-2">
                                 <img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/Pin-Icon.png"
                                     alt="Pin Location Mediplus">
-                                <span>10 Mohamad Mahmoud Ezzat Al-Nozha, Cairo, Egypt</span>
+                                <span><?php echo get_theme_mod('medplus_footer_contact_address_setting');?></span>
                             </li>
                             <li class="py-2"><img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/Phone-Icon.png"
-                                    alt="Phone contact Mediplus">+201205896314</li>
+                                    alt="Phone contact Mediplus"><?php echo get_theme_mod('medplus_footer_contact_phone_setting');?></li>
                             <li class="py-2"><img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/Email-Icon.png"
-                                    alt="Email Mediplus">contact@medplus.com</li>
+                                    alt="Email Mediplus"><?php echo get_theme_mod('medplus_footer_contact_email_setting');?></li>
                         </ul>
                     </address>
                 </div>
@@ -70,9 +70,9 @@ $container = get_theme_mod( 'medplus_container_type' );
                     <time class="py-2 d-flex align-items-center justify-content-between">
                         <span class="d-flex align-items-center">
                             <img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/clock.png" alt="Phone contact Mediplus">
-                            <p class="fs-18 fw-normal m-0">+Monday - Friday</p>
+                            <p class="fs-18 fw-normal m-0">+Monday - Friday <?php echo get_theme_mod('medplus_footer_weekday_setting');?></p>
                         </span>
-                        <p class="fs-18 fw-normal m-0">8:00 - 5:00</p>
+                        <p class="fs-18 fw-normal m-0"><?php echo get_theme_mod('medplus_footer_start_time_setting');?> - <?php echo get_theme_mod('medplus_footer_end_time_setting');?></p>
                     </time>
                     <time class="py-2 d-flex align-items-center justify-content-between">
                         <span class="d-flex align-items-center">
