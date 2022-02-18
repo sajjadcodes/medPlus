@@ -85,7 +85,7 @@ if ( ! function_exists( 'medplus_theme_customize_register' ) ) {
 		$wp_customize->add_setting(
 			'medplus_bootstrap_version',
 			array(
-				'default'           => 'bootstrap4',
+				'default'           => 'bootstrap5',
 				'type'              => 'theme_mod',
 				'sanitize_callback' => 'sanitize_text_field',
 				'capability'        => 'edit_theme_options',
@@ -232,6 +232,483 @@ if ( ! function_exists( 'medplus_theme_customize_register' ) ) {
 				)
 			)
 		);
+
+
+		// Custom user
+
+		// Custom panel
+
+				$wp_customize->add_panel( 'medplus_front_page_panel', 
+					array(
+						'priority'       => 0,
+						'title'            => __( 'MedPlus Theme Options', 'medplus' ),
+						'description'      => __( 'Theme Modifications like color scheme, theme texts and layout preferences can be done here', 'medplus' ),
+					) 
+
+	
+				);
+
+				// Text Options Section Inside Theme
+				$wp_customize->add_section( 'front_page_hero_section', 
+				array(
+					'title'         => __( 'Hero Section', 'medplus' ),
+					'priority'      => 1,
+					'panel'         => 'medplus_front_page_panel'
+				) 
+				);
+
+				// Setting for Copyright text.
+			$wp_customize->add_setting( 'medplus_hero_headline_text_setting',
+			array(
+				'default'           => __( 'We Provide High Solutions For Your Health', 'medplus' ),
+				// 'sanitize_callback' => 'sanitize_text_field',
+				'transport'         => 'refresh',
+			)
+			);
+
+			// Control for Copyright text
+			$wp_customize->add_control( 'medplus_hero_headline_text_setting', 
+			array(
+				'type'        => 'text',
+				'priority'    => 10,
+				'section'     => 'front_page_hero_section',
+				'label'       => 'Hero Headline',
+				'description' => 'Text put here will be outputted in the Hero Headline',
+			) 
+			);
+
+
+
+			// Hero section banner 
+			$wp_customize->add_setting( 'medplus_hero_image_setting', array(
+				'default'  => ''
+			));
+
+
+			$wp_customize->add_control(
+				new WP_Customize_Image_Control(
+					$wp_customize,
+					'Banner',
+					array(
+						'label'      => __( 'Upload a Banner', 'medplus' ),
+						'section'    => 'front_page_hero_section',
+						'settings'   => 'medplus_hero_image_setting',
+					
+					)
+				)
+			);
+
+
+			// Feature section 
+
+			$wp_customize->add_section( 'front_page_features_section', 
+			array(
+				'title'         => __( 'Features Section', 'medplus' ),
+				'priority'      => 2,
+				'panel'         => 'medplus_front_page_panel'
+			) 
+			);
+
+			// feature Section setting one
+
+			$wp_customize->add_setting( 'medplus_hero_freatue_one_text_setting',
+			array(
+				'default'           => __( 'We Provide High Solutions For Your Health', 'medplus' ),
+				// 'sanitize_callback' => 'sanitize_text_field',
+				'transport'         => 'refresh',
+			)
+			);
+
+			// feature Section setting two
+			$wp_customize->add_setting( 'medplus_hero_freatue_two_text_setting',
+			array(
+				'default'           => __( 'We Provide High Solutions For Your Health', 'medplus' ),
+				// 'sanitize_callback' => 'sanitize_text_field',
+				'transport'         => 'refresh',
+			)
+			);
+
+
+			// feature Section setting Three
+			$wp_customize->add_setting( 'medplus_hero_freatue_three_text_setting',
+			array(
+				'default'           => __( 'We Provide High Solutions For Your Health', 'medplus' ),
+				// 'sanitize_callback' => 'sanitize_text_field',
+				'transport'         => 'refresh',
+			)
+			);
+
+			// Control for Copyright text
+			$wp_customize->add_control( 'medplus_hero_freatue_one_text_setting', 
+			array(
+				'type'        => 'text',
+				'priority'    => 10,
+				'section'     => 'front_page_features_section',
+				'label'       => 'Featured One',
+				'description' => '',
+			) 
+			);
+
+				// Control feature one controller
+				$wp_customize->add_control( 'medplus_hero_freatue_two_text_setting', 
+				array(
+					'type'        => 'text',
+					'priority'    => 10,
+					'section'     => 'front_page_features_section',
+					'label'       => 'Featured two',
+					'description' => '',
+				) 
+				);
+
+				// Control feature one controller
+				$wp_customize->add_control( 'medplus_hero_freatue_three_text_setting', 
+				array(
+					'type'        => 'text',
+					'priority'    => 10,
+					'section'     => 'front_page_features_section',
+					'label'       => 'Featured three',
+					'description' => '',
+				) 
+				);
+
+
+				// feature section icons
+
+					// Hero section banner 
+			$wp_customize->add_setting( 'medplus_featured_icon_one_setting', array(
+				'default'  => ''
+			));
+
+
+			$wp_customize->add_control(
+				new WP_Customize_Image_Control(
+					$wp_customize,
+					'Icon One',
+					array(
+						'label'      => __( 'Featured One Icon', 'medplus' ),
+						'section'    => 'front_page_features_section',
+						'settings'   => 'medplus_featured_icon_one_setting',
+					
+					)
+				)
+			);
+
+			$wp_customize->add_setting( 'medplus_featured_icon_two_setting', array(
+				'default'  => ''
+			));
+
+
+			$wp_customize->add_control(
+				new WP_Customize_Image_Control(
+					$wp_customize,
+					'Icon Two',
+					array(
+						'label'      => __( 'Featured Two Icon', 'medplus' ),
+						'section'    => 'front_page_features_section',
+						'settings'   => 'medplus_featured_icon_two_setting',
+					
+					)
+				)
+			);
+
+			$wp_customize->add_setting( 'medplus_featured_icon_three_setting', array(
+				'default'  => ''
+			));
+
+
+			$wp_customize->add_control(
+				new WP_Customize_Image_Control(
+					$wp_customize,
+					'Icon Three',
+					array(
+						'label'      => __( 'Featured Three Icon', 'medplus' ),
+						'section'    => 'front_page_features_section',
+						'settings'   => 'medplus_featured_icon_three_setting',
+					
+					)
+				)
+			);
+
+
+
+				// Gallery section 
+
+				$wp_customize->add_section( 'front_page__section_gallery', 
+				array(
+					'title'         => __( 'Gallery Section', 'medplus' ),
+					'priority'      => 3,
+					'panel'         => 'medplus_front_page_panel'
+				) 
+				);
+
+				// Gallery section Setting 
+
+			$wp_customize->add_setting( 'medplus_gallary_section_title_setting',
+				array(
+					'default'           => __( 'Before & After Gallery', 'medplus' ),
+					// 'sanitize_callback' => 'sanitize_text_field',
+					'transport'         => 'refresh',
+				)
+				);
+
+			// Control for Copyright text
+			$wp_customize->add_control( 'medplus_gallary_section_title_setting', 
+				array(
+					'type'        => 'text',
+					'priority'    => 10,
+					'section'     => 'front_page__section_gallery',
+					'label'       => 'Featured One',
+					'description' => '',
+				) 
+				);
+
+
+				// Gallary SubTitle
+
+				$wp_customize->add_setting( 'medplus_gallary_section_subtitle_setting',
+				array(
+					'default'           => __( 'Before & After Gallery', 'medplus' ),
+					// 'sanitize_callback' => 'sanitize_text_field',
+					'transport'         => 'refresh',
+				)
+				);
+
+			// Control for Copyright text
+			$wp_customize->add_control( 'medplus_gallary_section_subtitle_setting', 
+				array(
+					'type'        => 'textarea',
+					'priority'    => 20,
+					'section'     => 'front_page__section_gallery',
+					'label'       => 'Featured One',
+					'description' => '',
+				) 
+				);
+
+
+
+					$wp_customize->add_setting( 'medplus_gallery_image_setting', array(
+						'default'  => ''
+					));
+				// Gallery section Controller
+					$wp_customize->add_control(
+						new WP_Customize_Image_Control(
+							$wp_customize,
+							'Icon One',
+							array(
+								'label'      => __( 'Gallary Image', 'medplus' ),
+								'priority'    => 30,
+								'section'    => 'front_page__section_gallery',
+								'settings'   => 'medplus_gallery_image_setting',
+							
+							)
+						)
+					);
+
+
+				// About Section customizer
+
+				$wp_customize->add_section( 'front_page__section_about', 
+				array(
+					'title'         => __( 'About Section', 'medplus' ),
+					'priority'      => 3,
+					'panel'         => 'medplus_front_page_panel'
+				) 
+				);
+
+
+
+
+				$wp_customize->add_setting( 'medplus_about_section_title_setting',
+				array(
+					'default'           => __( 'About Us', 'medplus' ),
+					// 'sanitize_callback' => 'sanitize_text_field',
+					'transport'         => 'refresh',
+				)
+				);
+
+			// Control for Copyright text
+			$wp_customize->add_control( 'medplus_about_section_title_setting', 
+				array(
+					'type'        => 'text',
+					'priority'    => 10,
+					'section'     => 'front_page__section_about',
+					'label'       => 'About Us Title',
+					'description' => '',
+				) 
+				);
+
+
+				// Gallary SubTitle
+
+				$wp_customize->add_setting( 'medplus_about_section_subtitle_setting',
+				array(
+					'default'           => __( 'About Section SubTitle', 'medplus' ),
+					// 'sanitize_callback' => 'sanitize_text_field',
+					'transport'         => 'refresh',
+				)
+				);
+
+			// Control for 
+			$wp_customize->add_control( 'medplus_about_section_subtitle_setting', 
+				array(
+					'type'        => 'textarea',
+					'priority'    => 20,
+					'section'     => 'front_page__section_about',
+					'label'       => 'About Us Section SubTitle',
+					'description' => '',
+				) 
+				);
+
+
+				// About us Control
+
+				$wp_customize->add_setting( 'medplus_about_section_doctor_counter_setting',
+				array(
+					'default'           => __( '', 'medplus' ),
+					// 'sanitize_callback' => 'sanitize_text_field',
+					'transport'         => 'refresh',
+				)
+				);
+
+			// Control for 
+			$wp_customize->add_control( 'medplus_about_section_doctor_counter_setting', 
+				array(
+					'type'        => 'number',
+					'priority'    => 20,
+					'section'     => 'front_page__section_about',
+					'label'       => 'Number of Doctors',
+					'description' => '',
+				) 
+				);
+
+
+
+				// counter for Nurses
+
+				$wp_customize->add_setting( 'medplus_about_section_nurse_counter_setting',
+				array(
+					'default'           => __( '', 'medplus' ),
+					// 'sanitize_callback' => 'sanitize_text_field',
+					'transport'         => 'refresh',
+				)
+				);
+
+			// Control for 
+			$wp_customize->add_control( 'medplus_about_section_nurse_counter_setting', 
+				array(
+					'type'        => 'number',
+					'priority'    => 30,
+					'section'     => 'front_page__section_about',
+					'label'       => 'Number of Nurse',
+					'description' => '',
+				) 
+				);
+
+				// Patient
+
+				$wp_customize->add_setting( 'medplus_about_section_patient_counter_setting',
+				array(
+					'default'           => __( '', 'medplus' ),
+					// 'sanitize_callback' => 'sanitize_text_field',
+					'transport'         => 'refresh',
+				)
+				);
+
+			// Control for 
+			$wp_customize->add_control( 'medplus_about_section_patient_counter_setting', 
+				array(
+					'type'        => 'number',
+					'priority'    => 40,
+					'section'     => 'front_page__section_about',
+					'label'       => 'Number of Patient',
+					'description' => '',
+				) 
+				);
+
+
+				$wp_customize->add_setting( 'medplus_about_section_case_studies_counter_setting',
+				array(
+					'default'           => __( '', 'medplus' ),
+					// 'sanitize_callback' => 'sanitize_text_field',
+					'transport'         => 'refresh',
+				)
+				);
+
+			// Control for 
+			$wp_customize->add_control( 'medplus_about_section_case_studies_counter_setting', 
+				array(
+					'type'        => 'number',
+					'priority'    => 50,
+					'section'     => 'front_page__section_about',
+					'label'       => 'Number of Case Studies',
+					'description' => '',
+				) 
+				);
+
+
+				// About us images
+
+				
+				$wp_customize->add_setting( 'medplus_about_image_one_setting', array(
+					'default'  => ''
+				));
+			// Gallery section Controller
+				$wp_customize->add_control(
+					new WP_Customize_Image_Control(
+						$wp_customize,
+						'About Image One',
+						array(
+							'label'      => __( 'About Us Image One', 'medplus' ),
+							'priority'    => 60,
+							'section'    => 'front_page__section_about',
+							'settings'   => 'medplus_about_image_one_setting',
+						
+						)
+					)
+				);
+
+
+
+				$wp_customize->add_setting( 'medplus_about_image_two_setting', array(
+					'default'  => ''
+				));
+			// Gallery section Controller
+				$wp_customize->add_control(
+					new WP_Customize_Image_Control(
+						$wp_customize,
+						'About Image two',
+						array(
+							'label'      => __( 'About Us Image Two', 'medplus' ),
+							'priority'    => 60,
+							'section'    => 'front_page__section_about',
+							'settings'   => 'medplus_about_image_two_setting',
+						
+						)
+					)
+				);
+
+
+				$wp_customize->add_setting( 'medplus_about_image_three_setting', array(
+					'default'  => ''
+				));
+			// Gallery section Controller
+				$wp_customize->add_control(
+					new WP_Customize_Image_Control(
+						$wp_customize,
+						'About Image Three',
+						array(
+							'label'      => __( 'About Us Image Three', 'medplus' ),
+							'priority'    => 70,
+							'section'    => 'front_page__section_about',
+							'settings'   => 'medplus_about_image_three_setting',
+						
+						)
+					)
+				);
+
+
+
+	
 
 	}
 } // End of if function_exists( 'medplus_theme_customize_register' ).

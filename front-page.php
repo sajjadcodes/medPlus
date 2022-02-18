@@ -25,13 +25,16 @@ $container = get_theme_mod( 'medplus_container_type' );
 
         <main>
 
-                <section class="hero" id="startchange" style="background-image: url(<?php echo get_template_directory_uri() ?>./assets/images/Banner\ Mask.png)" >
+                <section class="hero" id="startchange" style="background-image: url(<?php echo get_theme_mod( 'medplus_hero_image_setting');?>)" 
+                
+                >
                         <div class="overlay"></div>
                         <div class="container">
                             <div class="caption d-flex align-items-start flex-column justify-content-center">
-                                <h1 class="text-white fw-bold fs-64 mb-4 text-center text-lg-start" style="z-index: 9;" data-aos="fade-right">We Provide High
-                                    Solutions<br> For
-                                    Your Health</h1>
+                                <h1 class="text-white fw-bold fs-64 mb-4 text-center text-lg-start" style="z-index: 9;" data-aos="fade-right">
+                                    <?php echo get_theme_mod( 'medplus_hero_headline_text_setting');?>
+                                </h1>
+                                    
                                 <a class="fs-20 fw-semibold text-white text-decoration-underline pb-4 text-center d-lg-none d-block w-100"
                                     style="z-index: 9;" href="#" type="button">View All</a>
                                 <div class="d-lg-flex d-none gap-5">
@@ -48,18 +51,18 @@ $container = get_theme_mod( 'medplus_container_type' );
                         <div class="d-md-grid gap-4 d-md-flex justify-content-center">
                             <button class="clr-text fs-20 py-3 fw-semibold w-28 rounded-20 shadow border bg-white"
                                 type="button"  data-aos="fade-up">
-                                <img class="img-fluid me-1" src="<?php echo get_template_directory_uri() ?>./assets/images/CapIcon.png" alt="Highly Trained Dentists">
-                                Highly Trained Dentists
+                                <img class="img-fluid me-1" src="<?php echo get_theme_mod( 'medplus_featured_icon_one_setting');?>" alt="Highly Trained Dentists">
+                                <?php echo get_theme_mod( 'medplus_hero_freatue_one_text_setting');?>
                             </button>
                             <button class="clr-text fs-20 py-3 fw-semibold w-28 rounded-20 shadow border bg-white"
                                 type="button"  data-aos="fade-up">
-                                <img class="img-fluid me-1" src="<?php echo get_template_directory_uri() ?>./assets/images/MedalIcon.png" alt="Experienced Doctors">
-                                Experienced Doctors
+                                <img class="img-fluid me-1" src="<?php echo get_theme_mod( 'medplus_featured_icon_two_setting');?>" alt="">
+                                <?php echo get_theme_mod( 'medplus_hero_freatue_two_text_setting');?>
                             </button>
                             <button class="clr-text fs-20 py-3 fw-semibold w-28 rounded-20 shadow border bg-white"
                                 type="button"  data-aos="fade-up">
-                                <img class="img-fluid me-1" src="<?php echo get_template_directory_uri() ?>./assets/images/CapIcon.png" alt="Highly Trained Dentists">
-                                Highly Trained Dentists
+                                <img class="img-fluid me-1" src="<?php echo get_theme_mod( 'medplus_featured_icon_three_setting');?>" alt="Highly Trained Dentists">
+                                <?php echo get_theme_mod( 'medplus_hero_freatue_three_text_setting');?>
                             </button>
                         </div>
                     </div>
@@ -233,13 +236,15 @@ $container = get_theme_mod( 'medplus_container_type' );
                 <section class="py-5 bg-clr-gray" id="featured">
                     <div class="container">
                         <div class="feature__caption text-center">
-                            <h2 class="fs-24 fw-bold feature__caption--line" data-aos="fade-up">Before & After Gallery</h2>
+                            <h2 class="fs-24 fw-bold feature__caption--line" data-aos="fade-up">Before & After Gallery <?php echo get_theme_mod( 'medplus_gallary_section_title_setting');?></h2>
                             <p class="w-50 fs-18 fw-normal mx-auto" data-aos="fade-up">Lorem Ipsum is simply dummy text of the pritting industry.
                                 Lorem
-                                Ipsum has been the the 1500s,ining It was popularised in the 1960s w</p>
+                                Ipsum has been the the 1500s,ining It was popularised in the 1960s w
+                                <?php echo get_theme_mod( 'medplus_gallary_section_subtitle_setting');?>
+                            </p>
                             <a class="fs-20 fw-semibold clr-text text-decoration-underline pb-4" data-aos="fade-up" href="#" type="button">View
                                 All</a>
-                            <img class="img-fluid" data-aos="fade-right" src="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" alt="Before & After Treatment">
+                            <img class="img-fluid" data-aos="fade-right" src=" <?php echo get_theme_mod( 'medplus_gallery_image_setting');?>" alt="Before & After Treatment">
                         </div>
                     </div>
                 </section>
@@ -366,14 +371,15 @@ $container = get_theme_mod( 'medplus_container_type' );
                     <div class="container overflow-hidden">
                         <div class="row">
                             <div class="col-md-6">
-                                <h2 class="fs-24 fw-bold" data-aos="flip-down">About MediPlus</h2>
-                                <p class="fs-18 fw-normal" data-aos="flip-right">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem Ipsum has been the </p>
+                                <h2 class="fs-24 fw-bold" data-aos="flip-down"> <?php echo get_theme_mod( 'medplus_about_section_title_setting');?> </h2>
+                                <p class="fs-18 fw-normal" data-aos="flip-right">
+                                <?php echo get_theme_mod( 'medplus_about_section_title_setting');?>
+                                </p>
                                 <div class="row">
                                     <div class="col-6 d-md-block d-flex justify-content-between">
                                         <ul>
                                             <li class="fs-23 text-center text-md-start py-1 fw-bold clr-text" data-aos="fade-up">
-                                                <strong>200+</strong>
+                                                <strong><?php echo get_theme_mod( 'medplus_about_section_doctor_counter_setting');?>+</strong>
                                             </li>
                                             <li class="fs-23 text-center text-md-start py-1 fw-semibold" data-aos="fade-up">
                                                 <strong>Doctors</strong>
@@ -381,7 +387,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                         </ul>
                                         <ul>
                                             <li class="fs-23 text-center text-md-start py-1 fw-bold clr-text" data-aos="fade-up">
-                                                <strong>1000+</strong>
+                                                <strong><?php echo get_theme_mod( 'medplus_about_section_patient_counter_setting');?>+</strong>
                                             </li>
                                             <li class="fs-23 text-center text-md-start py-1 fw-semibold" data-aos="fade-up">
                                                 <strong>Patients</strong>
@@ -391,14 +397,14 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     <div class="col-6 d-md-block d-flex justify-content-between">
                                         <ul>
                                             <li class="fs-23 text-center text-md-start py-1 fw-bold clr-text" data-aos="fade-left">
-                                                <strong>150+</strong>
+                                                <strong><?php echo get_theme_mod('medplus_about_section_nurse_counter_setting'); ?>+</strong>
                                             </li>
                                             <li class="fs-23 text-center text-md-start py-1 fw-semibold" data-aos="fade-left"><strong>Nurses</strong>
                                             </li>
                                         </ul>
                                         <ul>
                                             <li class="fs-23 text-center text-md-start py-1 fw-bold clr-text" data-aos="fade-up">
-                                                <strong>100+</strong>
+                                                <strong><?php echo get_theme_mod('medplus_about_section_case_studies_counter_setting');?>+</strong>
                                             </li>
                                             <li class="fs-23 text-center text-md-start py-1 fw-semibold" data-aos="fade-up"><strong>Case
                                                     Studeis</strong></li>
@@ -409,11 +415,11 @@ $container = get_theme_mod( 'medplus_container_type' );
                             <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-6 d-flex justify-content-between flex-column">
-                                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="About mediPlus" data-aos="fade-right">
-                                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="About mediPlus" data-aos="fade-left">
+                                        <img class="img-fluid" src="<?php echo get_theme_mod('medplus_about_image_one_setting');?>" alt="About mediPlus" data-aos="fade-right">
+                                        <img class="img-fluid" src="<?php echo get_theme_mod('medplus_about_image_two_setting');?>" alt="About mediPlus" data-aos="fade-left">
                                     </div>
                                     <div class="col-6">
-                                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/medical-3.png" alt="About mediPlus" data-aos="fade-right">
+                                        <img class="img-fluid" src="<?php echo get_theme_mod('medplus_about_image_three_setting');?>" alt="About mediPlus" data-aos="fade-right">
                                     </div>
                                 </div>
                             </div>
