@@ -23,7 +23,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                 <!-- Info & Contact (Footer) -->
                 <div class="col-md-4">
                     <address>
-                        <a href="#"><img class="img-fluid pb-4" src="<?php echo get_template_directory_uri() ?>./assets/images/mediplus-Logo-white.png"
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="img-fluid pb-4" src="<?php echo get_theme_mod( 'medplus_theme_sticky_logo' ) ?>"
                                 alt="MediPlus Logo"></a>
                         <ul class="text-white fs-18 ps-3">
                             <li class="d-flex align-items-start py-2">
