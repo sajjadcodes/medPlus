@@ -34,12 +34,44 @@ $container = get_theme_mod( 'medplus_container_type' );
                 <article class="overflow-hidden pt-4">
                     <!-- Gallery Tab Buttons -->
                     <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab" role="tablist">
-                        <li class="nav-item mx-2" role="presentation">
-                            <button class="nav-link fs-18 fw-medium active" id="Braces-tab" data-bs-toggle="pill"
-                                data-bs-target="#Braces" type="button" role="tab" aria-controls="Braces"
-                                aria-selected="true">Braces</button>
-                        </li>
-                        <li class="nav-item mx-2" role="presentation">
+
+                    <?php
+                                  $args = array(
+                                    'post_type'      => 'gallery',
+                                    'posts_per_page' => 10,
+                                );
+                                $galleryQuery= new WP_Query($args);
+    
+    
+                                while($galleryQuery->have_posts()) {
+    
+                                    $galleryQuery->the_post();
+                                    $i=0;
+                                    $terms = get_the_terms($post->ID, 'group');
+                                    $termResults = array();
+                                    foreach($terms as $term){
+
+                                        echo $term->name . "<br>";
+
+                                        $termResults[$i]=$term->name;
+                                        $i++;
+
+                                    }
+
+
+                                }
+                                    echo "<pre>";
+                                        print_r($termResults);
+
+                                        foreach($termsResults as $result) {
+                                            echo $result . "<br>";
+
+                                        }
+                                    echo "</pre>";
+                                    exit();
+                    ?>
+                        
+                        <!-- <li class="nav-item mx-2" role="presentation">
                             <button class="nav-link fs-18 fw-medium" id="Hollywood-tab" data-bs-toggle="pill"
                                 data-bs-target="#Hollywood" type="button" role="tab" aria-controls="Hollywood"
                                 aria-selected="false">Hollywood Smile</button>
@@ -60,7 +92,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                             <button class="nav-link fs-18 fw-medium" id="Roots-Canal-tab" data-bs-toggle="pill"
                                 data-bs-target="#Roots-Canal" type="button" role="tab" aria-controls="Roots-Canal"
                                 aria-selected="false">Roots Canal</button>
-                        </li>
+                        </li> -->
                     </ul>
                     <!-- Gallery Tab Content -->
                     <div class="tab-content" id="pills-tabContent">

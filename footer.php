@@ -101,14 +101,10 @@ $container = get_theme_mod( 'medplus_container_type' );
 	</footer>
 
     <!--+++++++ ========== Inlcudees Js ========== +++++++-->
-    <script src="./assets/js/jquery-1.11.0.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.bundle.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
-    <script src="./assets/js/aos.js"></script>
+  
 
     <!-- +++  **** Script For Testimonial Slider ***  +++ -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         $('.testimonial__slider').slick({
 
             speed: 300,
@@ -125,7 +121,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                 }
             }]
         });
-    </script>
+    </script> -->
     <!-- +++  **** Script For Mobile Menu Toggler ***  +++ -->
     <script>
         function openNav() {
@@ -137,7 +133,7 @@ $container = get_theme_mod( 'medplus_container_type' );
     </script>
       <!-- +++  **** INITIALIZE AOS ***  +++ -->
    	 <script>
-        AOS.init();
+        // AOS.init();
 
         // scrolling menu background
 

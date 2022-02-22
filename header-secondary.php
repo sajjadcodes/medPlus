@@ -30,10 +30,7 @@ $navbar_type       = get_theme_mod( 'medplus_navbar_type', 'collapse' );
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/slick.css">
-    <link rel="stylesheet" href="<?php get_template_directory_uri()?>./assets/css/baguetteBox.min.css">
+
     <title>MEDPLUS Clinic</title>
 </head>
 

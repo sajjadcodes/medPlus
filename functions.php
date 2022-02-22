@@ -175,3 +175,281 @@ function create_speciality_cpt() {
 
 }
 add_action( 'init', 'create_speciality_cpt', 0 );
+
+
+
+
+
+
+// Register Custom Post Type Doctor
+function create_doctor_cpt() {
+
+	$labels = array(
+		'name' => _x( 'Doctors', 'Post Type General Name', 'medplus' ),
+		'singular_name' => _x( 'Doctor', 'Post Type Singular Name', 'medplus' ),
+		'menu_name' => _x( 'Doctors', 'Admin Menu text', 'medplus' ),
+		'name_admin_bar' => _x( 'Doctor', 'Add New on Toolbar', 'medplus' ),
+		'archives' => __( 'Doctor Archives', 'medplus' ),
+		'attributes' => __( 'Doctor Attributes', 'medplus' ),
+		'parent_item_colon' => __( 'Parent Doctor:', 'medplus' ),
+		'all_items' => __( 'All Doctors', 'medplus' ),
+		'add_new_item' => __( 'Add New Doctor', 'medplus' ),
+		'add_new' => __( 'Add New', 'medplus' ),
+		'new_item' => __( 'New Doctor', 'medplus' ),
+		'edit_item' => __( 'Edit Doctor', 'medplus' ),
+		'update_item' => __( 'Update Doctor', 'medplus' ),
+		'view_item' => __( 'View Doctor', 'medplus' ),
+		'view_items' => __( 'View Doctors', 'medplus' ),
+		'search_items' => __( 'Search Doctor', 'medplus' ),
+		'not_found' => __( 'Not found', 'medplus' ),
+		'not_found_in_trash' => __( 'Not found in Trash', 'medplus' ),
+		'featured_image' => __( 'Featured Image', 'medplus' ),
+		'set_featured_image' => __( 'Set featured image', 'medplus' ),
+		'remove_featured_image' => __( 'Remove featured image', 'medplus' ),
+		'use_featured_image' => __( 'Use as featured image', 'medplus' ),
+		'insert_into_item' => __( 'Insert into Doctor', 'medplus' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Doctor', 'medplus' ),
+		'items_list' => __( 'Doctors list', 'medplus' ),
+		'items_list_navigation' => __( 'Doctors list navigation', 'medplus' ),
+		'filter_items_list' => __( 'Filter Doctors list', 'medplus' ),
+	);
+	$args = array(
+		'label' => __( 'Doctor', 'medplus' ),
+		'description' => __( '', 'medplus' ),
+		'labels' => $labels,
+		'menu_icon' => 'dashicons-welcome-learn-more',
+		'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
+		'taxonomies' => array('area'),
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'menu_position' => 5,
+		'show_in_admin_bar' => true,
+		'show_in_nav_menus' => true,
+		'can_export' => true,
+		'has_archive' => true,
+		'hierarchical' => false,
+		'exclude_from_search' => false,
+		'show_in_rest' => true,
+		'publicly_queryable' => true,
+		'capability_type' => 'post',
+	);
+	register_post_type( 'doctor', $args );
+
+}
+add_action( 'init', 'create_doctor_cpt', 0 );
+
+
+
+
+
+// Register Taxonomy Area
+function create_area_tax() {
+
+	$labels = array(
+		'name'              => _x( 'Areas', 'taxonomy general name', 'medplus' ),
+		'singular_name'     => _x( 'Area', 'taxonomy singular name', 'medplus' ),
+		'search_items'      => __( 'Search Areas', 'medplus' ),
+		'all_items'         => __( 'All Areas', 'medplus' ),
+		'parent_item'       => __( 'Parent Area', 'medplus' ),
+		'parent_item_colon' => __( 'Parent Area:', 'medplus' ),
+		'edit_item'         => __( 'Edit Area', 'medplus' ),
+		'update_item'       => __( 'Update Area', 'medplus' ),
+		'add_new_item'      => __( 'Add New Area', 'medplus' ),
+		'new_item_name'     => __( 'New Area Name', 'medplus' ),
+		'menu_name'         => __( 'Area', 'medplus' ),
+	);
+	$args = array(
+		'labels' => $labels,
+		'description' => __( '', 'medplus' ),
+		'hierarchical' => false,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'show_in_nav_menus' => true,
+		'show_tagcloud' => true,
+		'show_in_quick_edit' => true,
+		'show_admin_column' => false,
+		'show_in_rest' => true,
+	);
+	register_taxonomy( 'area', array('doctor'), $args );
+
+}
+add_action( 'init', 'create_area_tax' );
+
+
+
+
+
+
+
+
+
+
+
+// Register Custom Post Type Testimonial
+function create_testimonial_cpt() {
+
+	$labels = array(
+		'name' => _x( 'Testimonials', 'Post Type General Name', 'medplus' ),
+		'singular_name' => _x( 'Testimonial', 'Post Type Singular Name', 'medplus' ),
+		'menu_name' => _x( 'Testimonials', 'Admin Menu text', 'medplus' ),
+		'name_admin_bar' => _x( 'Testimonial', 'Add New on Toolbar', 'medplus' ),
+		'archives' => __( 'Testimonial Archives', 'medplus' ),
+		'attributes' => __( 'Testimonial Attributes', 'medplus' ),
+		'parent_item_colon' => __( 'Parent Testimonial:', 'medplus' ),
+		'all_items' => __( 'All Testimonials', 'medplus' ),
+		'add_new_item' => __( 'Add New Testimonial', 'medplus' ),
+		'add_new' => __( 'Add New', 'medplus' ),
+		'new_item' => __( 'New Testimonial', 'medplus' ),
+		'edit_item' => __( 'Edit Testimonial', 'medplus' ),
+		'update_item' => __( 'Update Testimonial', 'medplus' ),
+		'view_item' => __( 'View Testimonial', 'medplus' ),
+		'view_items' => __( 'View Testimonials', 'medplus' ),
+		'search_items' => __( 'Search Testimonial', 'medplus' ),
+		'not_found' => __( 'Not found', 'medplus' ),
+		'not_found_in_trash' => __( 'Not found in Trash', 'medplus' ),
+		'featured_image' => __( 'Featured Image', 'medplus' ),
+		'set_featured_image' => __( 'Set featured image', 'medplus' ),
+		'remove_featured_image' => __( 'Remove featured image', 'medplus' ),
+		'use_featured_image' => __( 'Use as featured image', 'medplus' ),
+		'insert_into_item' => __( 'Insert into Testimonial', 'medplus' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Testimonial', 'medplus' ),
+		'items_list' => __( 'Testimonials list', 'medplus' ),
+		'items_list_navigation' => __( 'Testimonials list navigation', 'medplus' ),
+		'filter_items_list' => __( 'Filter Testimonials list', 'medplus' ),
+	);
+	$args = array(
+		'label' => __( 'Testimonial', 'medplus' ),
+		'description' => __( '', 'medplus' ),
+		'labels' => $labels,
+		'menu_icon' => '',
+		'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
+		'taxonomies' => array(),
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'menu_position' => 5,
+		'show_in_admin_bar' => true,
+		'show_in_nav_menus' => true,
+		'can_export' => true,
+		'has_archive' => true,
+		'hierarchical' => false,
+		'exclude_from_search' => false,
+		'show_in_rest' => true,
+		'publicly_queryable' => true,
+		'capability_type' => 'post',
+	);
+	register_post_type( 'testimonial', $args );
+
+}
+add_action( 'init', 'create_testimonial_cpt', 0 );
+
+
+
+
+
+
+
+
+
+
+// Register Custom Post Type Gallery
+function create_gallery_cpt() {
+
+	$labels = array(
+		'name' => _x( 'Gallery', 'Post Type General Name', 'medplus' ),
+		'singular_name' => _x( 'Gallery', 'Post Type Singular Name', 'medplus' ),
+		'menu_name' => _x( 'Gallery', 'Admin Menu text', 'medplus' ),
+		'name_admin_bar' => _x( 'Gallery', 'Add New on Toolbar', 'medplus' ),
+		'archives' => __( 'Gallery Archives', 'medplus' ),
+		'attributes' => __( 'Gallery Attributes', 'medplus' ),
+		'parent_item_colon' => __( 'Parent Gallery:', 'medplus' ),
+		'all_items' => __( 'All Gallery', 'medplus' ),
+		'add_new_item' => __( 'Add New Gallery', 'medplus' ),
+		'add_new' => __( 'Add New', 'medplus' ),
+		'new_item' => __( 'New Gallery', 'medplus' ),
+		'edit_item' => __( 'Edit Gallery', 'medplus' ),
+		'update_item' => __( 'Update Gallery', 'medplus' ),
+		'view_item' => __( 'View Gallery', 'medplus' ),
+		'view_items' => __( 'View Gallery', 'medplus' ),
+		'search_items' => __( 'Search Gallery', 'medplus' ),
+		'not_found' => __( 'Not found', 'medplus' ),
+		'not_found_in_trash' => __( 'Not found in Trash', 'medplus' ),
+		'featured_image' => __( 'Featured Image', 'medplus' ),
+		'set_featured_image' => __( 'Set featured image', 'medplus' ),
+		'remove_featured_image' => __( 'Remove featured image', 'medplus' ),
+		'use_featured_image' => __( 'Use as featured image', 'medplus' ),
+		'insert_into_item' => __( 'Insert into Gallery', 'medplus' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Gallery', 'medplus' ),
+		'items_list' => __( 'Gallery list', 'medplus' ),
+		'items_list_navigation' => __( 'Gallery list navigation', 'medplus' ),
+		'filter_items_list' => __( 'Filter Gallery list', 'medplus' ),
+	);
+	$args = array(
+		'label' => __( 'Gallery', 'medplus' ),
+		'description' => __( '', 'medplus' ),
+		'labels' => $labels,
+		'menu_icon' => 'dashicons-camera',
+		'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
+		'taxonomies' => array('group'),
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'menu_position' => 5,
+		'show_in_admin_bar' => true,
+		'show_in_nav_menus' => true,
+		'can_export' => true,
+		'has_archive' => true,
+		'hierarchical' => false,
+		'exclude_from_search' => false,
+		'show_in_rest' => true,
+		'publicly_queryable' => true,
+		'capability_type' => 'post',
+	);
+	register_post_type( 'gallery', $args );
+
+}
+add_action( 'init', 'create_gallery_cpt', 0 );
+
+
+
+
+
+
+
+// Register Taxonomy Group
+function create_group_tax() {
+
+	$labels = array(
+		'name'              => _x( 'Groups', 'taxonomy general name', 'medplus' ),
+		'singular_name'     => _x( 'Group', 'taxonomy singular name', 'medplus' ),
+		'search_items'      => __( 'Search Groups', 'medplus' ),
+		'all_items'         => __( 'All Groups', 'medplus' ),
+		'parent_item'       => __( 'Parent Group', 'medplus' ),
+		'parent_item_colon' => __( 'Parent Group:', 'medplus' ),
+		'edit_item'         => __( 'Edit Group', 'medplus' ),
+		'update_item'       => __( 'Update Group', 'medplus' ),
+		'add_new_item'      => __( 'Add New Group', 'medplus' ),
+		'new_item_name'     => __( 'New Group Name', 'medplus' ),
+		'menu_name'         => __( 'Group', 'medplus' ),
+	);
+	$args = array(
+		'labels' => $labels,
+		'description' => __( '', 'medplus' ),
+		'hierarchical' => false,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'show_in_nav_menus' => true,
+		'show_tagcloud' => true,
+		'show_in_quick_edit' => true,
+		'show_admin_column' => false,
+		'show_in_rest' => true,
+	);
+	register_taxonomy( 'group', array('gallery'), $args );
+
+}
+add_action( 'init', 'create_group_tax' );

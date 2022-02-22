@@ -1,10 +1,11 @@
-import $ from "jquery"
+import $ from "jquery";
+import AOS from "aos_scripts";
 
 
 // Our modules / classes
-import AOS from "./aos"
+// import AOS from "./aos"
 
-AOS.init();
+// AOS.init();
 
 
 $(document).ready(function(){ 
@@ -49,23 +50,28 @@ $(document).ready(function(){
 }
 });
 
-// $('.testimonial__slider').slick({
+$('.testimonial__slider').slick({
 
-//     speed: 300,
-//     slidesToShow: 2,
-//     slidesToScroll: 1,
-//     autoplay: false,
-//     arrows: false,
-//     dots: false,
-//     responsive: [{
-//         breakpoint: 900,
-//         settings: {
-//             slidesToShow: 1,
-//             slidesToScroll: 1
-//         }
-//     }]
-// });
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: false,
+    arrows: false,
+    dots: false,
+    responsive: [{
+        breakpoint: 900,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }
+    }]
+});
 
+$('.doctor-carousal').slick({
+
+
+
+});
 
 
 //mySidenav

@@ -131,93 +131,55 @@ $container = get_theme_mod( 'medplus_container_type' );
                     <div class="container">
                         <div class="carousel-inner">
 
-                            <div class="carousel-item active">
+                        
+                        <?php
+
+                            $args = array(
+                                'post_type'      => 'doctor',
+                                'posts_per_page' => 10,
+                            );
+                            $doctorQuery= new WP_Query($args);
+
+
+                            while($doctorQuery->have_posts()) {
+
+                                $doctorQuery->the_post();
+                         ?>
+
+                                <div class="carousel-item active">
                                 <div
                                     class="row gap-lg-0 gap-4 d-lg-flex flex-lg-row flex-column justify-content-center align-items-center">
                                     <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in-up">
                                         <span class="outer-circle rounded-circle">
                                             <span class="inner-circle rounded-circle">
-                                                <img src="<?php echo get_template_directory_uri() ?>./assets/images/Image-Mask.png">
+                                                <img src="<?php the_post_thumbnail_url();?>">
+                                                <?php the_post_thumbnail(); ?>
+                                            
                                             </span>
                                         </span>
                                     </div>
                                     <div class="col-lg-6 text-center text-lg-start ms-n3" data-aos="zoom-in-up">
-                                        <h2 class="fs-24 fw-bold clr-text">Dr. Hanaa Mohamad</h2>
-                                        <h2 class="fs-24 fw-semibold fst-italic">Obstetrician - Gynecologists</h2>
-                                        <p class="fs-18 fw-normal">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting
-                                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-                                            1500s,
-                                            when an unknown printer took a galley of type and scrambled it to make a type
-                                            specimen
-                                            book. It has survived not only five centuries, but also the leap into electronic
-                                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                                            the
-                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        <h2 class="fs-24 fw-bold clr-text"><?php the_title(); ?></h2>
+                                                <h2 class="fs-24 fw-semibold fst-italic">Obstetrician - Gynecologists </h2>
+                                        <p class="fs-18 fw-normal">
+                                        <?php 
+                                        // the_content();
+                                        ?>
+
                                         </p>
                                     </div>
                                 </div>
-                            </div>
+                            </div>             
 
-                            <div class="carousel-item">
-                                <div
-                                    class="row gap-lg-0 gap-4 d-lg-flex flex-lg-row flex-column justify-content-center align-items-center">
-                                    <div class="col-lg-6 d-flex justify-content-center">
-                                        <span class="outer-circle rounded-circle">
-                                            <span class="inner-circle rounded-circle">
-                                                <img src="<?php echo get_template_directory_uri() ?>./assets/images/Image-Mask.png">
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <div class="col-lg-6 text-center text-lg-start ms-n3">
-                                        <h2 class="fs-24 fw-bold clr-text">Dr. Hanaa Mohamad</h2>
-                                        <h2 class="fs-24 fw-semibold fst-italic">Obstetrician - Gynecologists</h2>
-                                        <p class="fs-18 fw-normal">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting
-                                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-                                            1500s,
-                                            when an unknown printer took a galley of type and scrambled it to make a type
-                                            specimen
-                                            book. It has survived not only five centuries, but also the leap into electronic
-                                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                                            the
-                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                        <?php 
 
-                            <div class="carousel-item">
-                                <div
-                                    class="row gap-lg-0 gap-4 d-lg-flex flex-lg-row flex-column justify-content-center align-items-center">
-                                    <div class="col-lg-6 d-flex justify-content-center">
-                                        <span class="outer-circle rounded-circle">
-                                            <span class="inner-circle rounded-circle">
-                                                <img src="<?php echo get_template_directory_uri() ?>./assets/images/Image-Mask.png">
-                                            </span>
-                                        </span>
-                                    </div>
-                                    <div class="col-lg-6 text-center text-lg-start ms-n3">
-                                        <h2 class="fs-24 fw-bold clr-text">Dr. Hanaa Mohamad</h2>
-                                        <h2 class="fs-24 fw-semibold fst-italic">Obstetrician - Gynecologists</h2>
-                                        <p class="fs-18 fw-normal">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting
-                                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-                                            1500s,
-                                            when an unknown printer took a galley of type and scrambled it to make a type
-                                            specimen
-                                            book. It has survived not only five centuries, but also the leap into electronic
-                                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                                            the
-                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            }
 
+                            wp_reset_postdata(  );
+                        ?>
+
+
+                     
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                             data-bs-slide="prev">
@@ -438,59 +400,40 @@ $container = get_theme_mod( 'medplus_container_type' );
                         </div>
                         <div class="testimonial__slider">
                             <!-- Testimonial (Slide_1)-->
+                           <?php 
+
+                            $testArgs = array(
+                                'post_type'      => 'testimonial',
+                                'posts_per_page' => 10,
+                            );
+                            $testimonialQuery= new WP_Query($testArgs);
+                           
+                           while($testimonialQuery->have_posts()) {
+                            $testimonialQuery->the_post();
+                               ?>
+
                             <div  data-aos="zoom-in-up">
                                 <div class="testimonial__caption shadow border bg-white p-3 rounded-20 my-4 me-2">
                                     <div class="d-flex justify-content-between align-items-baseline pb-4">
                                         <div class="d-flex align-items-center">
-                                            <img src="<?php echo get_template_directory_uri() ?>./assets/images/testimonilal-1.png" alt="Testimonial Card">
+                                            <img src="<?php the_post_thumbnail_url(); ?>" alt="Testimonial Card">
                                             <span class="testimonial__title ps-3">
-                                                <h3 class="fs-20 fw-medium m-0">Passant Mohamed</h3>
-                                                <small class="fs-16 fst-italic clr-text-light">28 December 2021</small>
+                                                <h3 class="fs-20 fw-medium m-0"><?php the_title(); ?></h3>
+                                                <small class="fs-16 fst-italic clr-text-light"><?php echo get_the_title(); ?></small>
                                             </span>
                                         </div>
                                         <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/Stars.png" alt="Customer Rating">
                                     </div>
-                                    <p class="fs-16 fw-normal m-0">My son 9 years old had supernumerary tooth in the palate many
-                                        doctors said very difficult to be removed Dr. Basem Samir did it in less than 15mins
-                                        Perfect, my son couldn’t believe it... Thank u dr. Bassem Samir for ur help.</p>
+                                    <p class="fs-16 fw-normal m-0">
+                                        <?php the_content(); ?>
+                                    </p>
                                 </div>
                             </div>
-                            <!-- Testimonial (Slide_1)-->
-                            <div data-aos="zoom-in-up">
-                                <div class="testimonial__caption shadow border bg-white p-3 rounded-20 my-4 me-2">
-                                    <div class="d-flex justify-content-between align-items-baseline pb-4">
-                                        <div class="d-flex align-items-center">
-                                            <img src="<?php echo get_template_directory_uri() ?>./assets/images/testimonilal-1.png" alt="Testimonial Card">
-                                            <span class="testimonial__title ps-3">
-                                                <h3 class="fs-20 fw-medium m-0">Passant Mohamed</h3>
-                                                <small class="fs-16 fst-italic clr-text-light">28 December 2021</small>
-                                            </span>
-                                        </div>
-                                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/Stars.png" alt="Customer Rating">
-                                    </div>
-                                    <p class="fs-16 fw-normal m-0">My son 9 years old had supernumerary tooth in the palate many
-                                        doctors said very difficult to be removed Dr. Basem Samir did it in less than 15mins
-                                        Perfect, my son couldn’t believe it... Thank u dr. Bassem Samir for ur help.</p>
-                                </div>
-                            </div>
-                            <!-- Testimonial (Slide_2)-->
-                            <div data-aos="zoom-in-up">
-                                <div class="testimonial__caption shadow border bg-white p-3 rounded-20 my-4 me-2">
-                                    <div class="d-flex justify-content-between align-items-baseline pb-4">
-                                        <div class="d-flex align-items-center">
-                                            <img src="<?php echo get_template_directory_uri() ?>./assets/images/testimonilal-1.png" alt="Testimonial Card">
-                                            <span class="testimonial__title ps-3">
-                                                <h3 class="fs-20 fw-medium m-0">Passant Mohamed</h3>
-                                                <small class="fs-16 fst-italic clr-text-light">28 December 2021</small>
-                                            </span>
-                                        </div>
-                                        <img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/Stars.png" alt="Customer Rating">
-                                    </div>
-                                    <p class="fs-16 fw-normal m-0">My son 9 years old had supernumerary tooth in the palate many
-                                        doctors said very difficult to be removed Dr. Basem Samir did it in less than 15mins
-                                        Perfect, my son couldn’t believe it... Thank u dr. Bassem Samir for ur help.</p>
-                                </div>
-                            </div>
+
+                            <?php 
+                           }
+                           ?>
+                           
                         </div>
                     </div>
                 </section>
@@ -498,8 +441,9 @@ $container = get_theme_mod( 'medplus_container_type' );
                 <!-- Section: Google Map -->
                 <section id="googleMap">
                     <iframe class="w-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.2292645233083!2d31.45585711431897!3d30.03027982619817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145822c58e3e002b%3A0x503e06c2175a2111!2sDr.%20Bassem%20Samir%20Dental%20Clinic%20-%20Al%20Tabib%202!5e0!3m2!1sen!2s!4v1643148638170!5m2!1sen!2s"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        src="<?php echo get_theme_mod('medplus_map_url_setting');?>"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
                 </section>
         </main>
 
@@ -512,7 +456,7 @@ $container = get_theme_mod( 'medplus_container_type' );
 
         $('.testimonial__slider').slick({
 
-            speed: 300,
+            speed: 100,
             slidesToShow: 2,
             slidesToScroll: 1,
             autoplay: false,
