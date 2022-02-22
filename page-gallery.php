@@ -33,278 +33,99 @@ $container = get_theme_mod( 'medplus_container_type' );
                 <!-- Photo Gallery (Caption) -->
                 <article class="overflow-hidden pt-4">
                     <!-- Gallery Tab Buttons -->
+                    <?php
+                                   $termsCPT = get_terms( array(
+                                    'taxonomy' => 'group',
+                                ) );
+
+                                // echo "<pre>";
+                                        
+                                // print_r($termsCPT);
+                                    
+                                // echo"</pre>";
+                                // exit();
+                                //    $gallaryTerms = array(); 
+                                // foreach($termsCPT as $term){
+
+                                //     array_push($gallaryTerms, $term->name);
+                                // }
+
+                                //   echo "<pre>";
+                                        
+                                // print_r($termsCPT);
+                                    
+                                // echo"</pre>";
+                                // exit();
+
+
+                    ?>
                     <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab" role="tablist">
 
-                    <?php
-                                  $args = array(
-                                    'post_type'      => 'gallery',
-                                    'posts_per_page' => 10,
-                                );
-                                $galleryQuery= new WP_Query($args);
-    
-    
-                                while($galleryQuery->have_posts()) {
-    
-                                    $galleryQuery->the_post();
-                                    $i=0;
-                                    $terms = get_the_terms($post->ID, 'group');
-                                    $termResults = array();
-                                    foreach($terms as $term){
+                                    <?php
+                                    
+                                        foreach($termsCPT as $term){
+                                            ?>
 
-                                        echo $term->name . "<br>";
-
-                                        $termResults[$i]=$term->name;
-                                        $i++;
-
-                                    }
-
-
-                                }
-                                    echo "<pre>";
-                                        print_r($termResults);
-
-                                        foreach($termsResults as $result) {
-                                            echo $result . "<br>";
-
+                                            <li class="nav-item mx-2" role="presentation">
+                                                <button class="nav-link fs-18 fw-medium" id="<?php echo $term->name; ?>-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#<?php echo $term->name; ?>" type="button" role="tab" aria-controls="<?php echo $term->name; ?>"
+                                                    aria-selected="false"><?php echo $term->name; ?></button>
+                                            </li>
+                                            <?php
                                         }
-                                    echo "</pre>";
-                                    exit();
-                    ?>
+                                        
+                                       
+                                    ?>
                         
-                        <!-- <li class="nav-item mx-2" role="presentation">
-                            <button class="nav-link fs-18 fw-medium" id="Hollywood-tab" data-bs-toggle="pill"
-                                data-bs-target="#Hollywood" type="button" role="tab" aria-controls="Hollywood"
-                                aria-selected="false">Hollywood Smile</button>
-                        </li>
-                        <li class="nav-item mx-2" role="presentation">
-                            <button class="nav-link fs-18 fw-medium" id="Crown-tab" data-bs-toggle="pill"
-                                data-bs-target="#Crown" type="button" role="tab" aria-controls="Crown"
-                                aria-selected="false">Crown</button>
-                        </li>
-
-                        <li class="nav-item mx-2" role="presentation">
-                            <button class="nav-link fs-18 fw-medium" id="Bleaching-tab" data-bs-toggle="pill"
-                                data-bs-target="#Bleaching" type="button" role="tab" aria-controls="Bleaching"
-                                aria-selected="false">Bleaching</button>
-                        </li>
-
-                        <li class="nav-item mx-2" role="presentation">
-                            <button class="nav-link fs-18 fw-medium" id="Roots-Canal-tab" data-bs-toggle="pill"
-                                data-bs-target="#Roots-Canal" type="button" role="tab" aria-controls="Roots-Canal"
-                                aria-selected="false">Roots Canal</button>
-                        </li> -->
                     </ul>
                     <!-- Gallery Tab Content -->
+
+                                   
+
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="Braces" role="tabpanel" aria-labelledby="Braces-tab">
-                            <div class="gallery">
-                                <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
 
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-5.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-5.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-3.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-3.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-3.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                       
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                    
+                                        foreach($termsCPT as $term){
+                                            ?>
+                                            <div class="tab-pane fade show active" id="<?php echo $term->name; ?>" role="tabpanel" aria-labelledby="<?php echo $term->name; ?>-tab">
+                                            <div class="gallery">
+                                       <?php 
+                                        }
+                                        ?>
+                                                <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
+                                                           <?php
+                                                                         $args = array(
+                                                                            'post_type'      => 'gallery',
+                                                                            // 'posts_per_page' => 10,
+                                                                            'group'  => $term->name,
+                                                                            'term'      =>$term->name,
+                                                                        );
+                                                                        $galleryQuery= new WP_Query($args);
 
-                        <div class="tab-pane fade" id="Hollywood" role="tabpanel" aria-labelledby="Hollywood-tab">
-                            <div class="gallery">
-                                <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
+                                                                while($galleryQuery->have_posts()){
+                                                                    $galleryQuery->the_post();?>
+                                                                <div class="col mb-4">
+                                                                    <a href="<?php the_post_thumbnail_url();?>" data-caption="Image caption">
+                                                                        <img src="<?php the_post_thumbnail_url();?>" alt="First image" class="img-fluid mb-4">
+                                                                    </a>
+                                                                    <a href="<?php the_post_thumbnail_url();?>">
+                                                                        <img src="<?php the_post_thumbnail_url();?>" alt="Second image" class="img-fluid mb-4">
+                                                                    </a>
+                                                                </div>
 
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                       
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="tab-pane fade" id="Crown" role="tabpanel" aria-labelledby="Crown-tab">
-                            <div class="gallery">
-                                <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
+                                                                    <?php
+                                                                }
+                                                                wp_reset_postdata();
 
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
+                                                           ?>
+                                                </div>
                                             </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                       
-                                </div>
-                            </div>
-                        </div>
+                                        </div>
+            
 
-                        <div class="tab-pane fade" id="Bleaching" role="tabpanel" aria-labelledby="Bleaching-tab">
-                            <div class="gallery">
-                                <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
-
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                       
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="Roots-Canal" role="tabpanel" aria-labelledby="Roots-Canal-tab">
-                            <div class="gallery">
-                                <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
-
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-2.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/gallery-1.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" data-caption="Image caption">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png">
-                                                    <img src="<?php echo get_template_directory_uri() ?>./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                       
-                                </div>
-                            </div>
-                          
-                        </div>
-
+     
                     </div>
                     <!-- <div id="overlay"></div> -->
                     <div class="container readmore text-center p-4 ">
