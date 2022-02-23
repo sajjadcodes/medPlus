@@ -67,11 +67,6 @@ $('.testimonial__slider').slick({
     }]
 });
 
-$('.doctor-carousal').slick({
-
-
-
-});
 
 
 //mySidenav

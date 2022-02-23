@@ -9350,8 +9350,7 @@
 	      slidesToScroll: 1
 	    }
 	  }]
-	});
-	$__default["default"]('.doctor-carousal').slick({}); //mySidenav
+	}); //mySidenav
 
 	exports.Alert = alert$1;
 	exports.Button = button;

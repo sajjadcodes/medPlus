@@ -127,59 +127,123 @@ $container = get_theme_mod( 'medplus_container_type' );
                 </div>
 
                 <!-- === **** Section Doctor(Slider) *** ===  -->
+
                 <div class="carousel staff__slider slide my-5" id="carouselExampleCaptions" data-bs-ride="carousel">
                     <div class="container">
                         <div class="carousel-inner">
 
-                        
-                        <?php
+                         
 
-                            $args = array(
-                                'post_type'      => 'doctor',
-                                'posts_per_page' => 10,
-                            );
-                            $doctorQuery= new WP_Query($args);
+                            <?php
+                                  
+                                     $doctorTerm = get_terms( array(
+                                        'taxonomy' => 'area',
+                                    ) );
+        
+        
+                                       $typeTerm = array(); 
+                                        foreach($doctorTerm as $term){
+        
+                                            array_push($typeTerm, $term->name);
+                                           
+                                        }
 
 
-                            while($doctorQuery->have_posts()) {
+                                        $args = array(
+                                            'post_type'      => 'doctor',
+                                            'posts_per_page' => 10,
+                                        );
+                                        $doctorQuery= new WP_Query($args);
+                                        $i=0;
+                                        while($doctorQuery->have_posts()) {
+                                       
+                                            $doctorQuery->the_post();
+                                                ?>
 
-                                $doctorQuery->the_post();
-                         ?>
+                                         <div class="carousel-item <?php if($i == 0): ?>active<?php endif; ?>">
+                                            <div
+                                                class="row gap-lg-0 gap-4 d-lg-flex flex-lg-row flex-column justify-content-center align-items-center">
+                                                <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in-up">
+                                                    <span class="outer-circle rounded-circle">
+                                                        <span class="inner-circle rounded-circle">
+                                                            <img src="<?php the_post_thumbnail_url(); ?>">
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div class="col-lg-6 text-center text-lg-start ms-n3" data-aos="zoom-in-up">
+                                                    <h2 class="fs-24 fw-bold clr-text"><?php the_title(); ?></h2>
+                                                    <h2 class="fs-24 fw-semibold fst-italic"><?php echo $typeTerm[$i]?></h2>
+                                                    <p class="fs-18 fw-normal">
+                                                        <?php the_content();  ?>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                <div class="carousel-item active">
+                                           <?php 
+                                           $i++;
+                                        }
+                            
+                            ?>
+
+                            <!-- <div class="carousel-item">
                                 <div
                                     class="row gap-lg-0 gap-4 d-lg-flex flex-lg-row flex-column justify-content-center align-items-center">
-                                    <div class="col-lg-6 d-flex justify-content-center" data-aos="zoom-in-up">
+                                    <div class="col-lg-6 d-flex justify-content-center">
                                         <span class="outer-circle rounded-circle">
                                             <span class="inner-circle rounded-circle">
-                                                <img src="<?php the_post_thumbnail_url();?>">
-                                                <?php the_post_thumbnail(); ?>
-                                            
+                                                <img src="assets/images/Image-Mask.png">
                                             </span>
                                         </span>
                                     </div>
-                                    <div class="col-lg-6 text-center text-lg-start ms-n3" data-aos="zoom-in-up">
-                                        <h2 class="fs-24 fw-bold clr-text"><?php the_title(); ?></h2>
-                                                <h2 class="fs-24 fw-semibold fst-italic">Obstetrician - Gynecologists </h2>
-                                        <p class="fs-18 fw-normal">
-                                        <?php 
-                                        // the_content();
-                                        ?>
-
+                                    <div class="col-lg-6 text-center text-lg-start ms-n3">
+                                        <h2 class="fs-24 fw-bold clr-text">Dr. Hanaa Mohamad</h2>
+                                        <h2 class="fs-24 fw-semibold fst-italic">Obstetrician - Gynecologists</h2>
+                                        <p class="fs-18 fw-normal">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting
+                                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            1500s,
+                                            when an unknown printer took a galley of type and scrambled it to make a type
+                                            specimen
+                                            book. It has survived not only five centuries, but also the leap into electronic
+                                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+                                            the
+                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                                         </p>
                                     </div>
                                 </div>
-                            </div>             
+                            </div>
 
-                        <?php 
+                            <div class="carousel-item">
+                                <div
+                                    class="row gap-lg-0 gap-4 d-lg-flex flex-lg-row flex-column justify-content-center align-items-center">
+                                    <div class="col-lg-6 d-flex justify-content-center">
+                                        <span class="outer-circle rounded-circle">
+                                            <span class="inner-circle rounded-circle">
+                                                <img src="assets/images/Image-Mask.png">
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="col-lg-6 text-center text-lg-start ms-n3">
+                                        <h2 class="fs-24 fw-bold clr-text">Dr. Hanaa Mohamad</h2>
+                                        <h2 class="fs-24 fw-semibold fst-italic">Obstetrician - Gynecologists</h2>
+                                        <p class="fs-18 fw-normal">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting
+                                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            1500s,
+                                            when an unknown printer took a galley of type and scrambled it to make a type
+                                            specimen
+                                            book. It has survived not only five centuries, but also the leap into electronic
+                                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+                                            the
+                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div> -->
 
-                            }
-
-                            wp_reset_postdata(  );
-                        ?>
-
-
-                     
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                             data-bs-slide="prev">
@@ -194,6 +258,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                     </div>
                 </div>
 
+               
                 <!-- === **** Section features *** ===  -->
                 <section class="py-5 bg-clr-gray" id="featured">
                     <div class="container">
