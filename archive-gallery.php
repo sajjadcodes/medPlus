@@ -26,9 +26,11 @@ $container = get_theme_mod( 'medplus_container_type' );
             <div class="container">
                 <!-- Photo Gallery (Head) -->
                 <article class="text-center">
-                    <h2 class="fs-24 fw-bold feature__caption--line">Photo Gallery</h2>
-                    <p class="w-50 fs-18 fw-normal mx-auto">Lorem Ipsum is simply dummy text of the pritting industry.
-                        Lorem Ipsum has been the the 1500s,ining It was popularised in the 1960s w</p>
+                    <h2 class="fs-24 fw-bold feature__caption--line"><?php esc_html_e('Photo Gallery','medplus');?></h2>
+                    <p class="w-50 fs-18 fw-normal mx-auto">
+                        <?php esc_html_e('Lorem Ipsum is simply dummy text of the pritting industry.
+                        Lorem Ipsum has been the the 1500s,ining It was popularised in the 1960s w', 'medplus'); ?>
+                    </p>
                 </article>
                 <!-- Photo Gallery (Caption) -->
                 <article class="overflow-hidden pt-4">
@@ -37,25 +39,6 @@ $container = get_theme_mod( 'medplus_container_type' );
                                    $termsCPT = get_terms( array(
                                     'taxonomy' => 'group',
                                 ) );
-
-                                // echo "<pre>";
-                                        
-                                // print_r($termsCPT);
-                                    
-                                // echo"</pre>";
-                                // exit();
-                                //    $gallaryTerms = array(); 
-                                // foreach($termsCPT as $term){
-
-                                //     array_push($gallaryTerms, $term->name);
-                                // }
-
-                                //   echo "<pre>";
-                                        
-                                // print_r($termsCPT);
-                                    
-                                // echo"</pre>";
-                                // exit();
 
 
                     ?>
@@ -78,9 +61,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     ?>
                         
                     </ul>
-                    <!-- Gallery Tab Content -->
-
-                                   
+                    <!-- Gallery Tab Content -->          
 
                     <div class="tab-content" id="pills-tabContent">
 
@@ -93,7 +74,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                        <?php 
                                         }
                                         ?>
-                                                <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
+                                            <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
                                                            <?php
                                                                          $args = array(
                                                                             'post_type'      => 'gallery',
@@ -112,7 +93,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                                                     <a href="<?php the_post_thumbnail_url();?>">
                                                                         <img src="<?php the_post_thumbnail_url();?>" alt="Second image" class="img-fluid mb-4">
                                                                     </a>
-                                                                </div>
+                                                               </div>
 
 
                                                                     <?php
@@ -123,13 +104,11 @@ $container = get_theme_mod( 'medplus_container_type' );
                                                 </div>
                                             </div>
                                         </div>
-            
-
      
                     </div>
                     <!-- <div id="overlay"></div> -->
                     <div class="container readmore text-center p-4 ">
-                        <h2 class="fs-18 readmore__btn--line">Read More</h2>
+                        <h2 class="fs-18 readmore__btn--line"><?php esc_html_e('Read More','medplus');?></h2>
                     </div>
                 </article>
             </div>

@@ -25,9 +25,7 @@ $container = get_theme_mod( 'medplus_container_type' );
 
         <main>
 
-                <section class="hero" id="startchange" style="background-image: url(<?php echo get_theme_mod( 'medplus_hero_image_setting');?>)" 
-                
-                >
+                <section class="hero" id="startchange" style="background-image: url(<?php echo get_theme_mod( 'medplus_hero_image_setting');?>)">
                         <div class="overlay"></div>
                         <div class="container">
                             <div class="caption d-flex align-items-start flex-column justify-content-center">
@@ -36,11 +34,12 @@ $container = get_theme_mod( 'medplus_container_type' );
                                 </h1>
                                     
                                 <a class="fs-20 fw-semibold text-white text-decoration-underline pb-4 text-center d-lg-none d-block w-100"
-                                    style="z-index: 9;" href="#" type="button">View All</a>
+                                    style="z-index: 9;" href="<?php home_url('/gallery');?>" type="button"><?php esc_html_e('View All','medplus');?></a>
                                 <div class="d-lg-flex d-none gap-5">
-                                    <a  href="<?php echo home_url('/services') ?>" class="button button--state-active btn-lg fs-26 fw-medium shadow"  data-aos="fade-left">Our
-                                        Services</a>
-                                        <a  href="<?php echo home_url('/medical-specialities') ?>" class="button btn-lg fs-26 fw-medium shadow"  data-aos="fade-down">View Our Doctors</a>
+                                    <a  href="<?php echo home_url('/services') ?>" class="button button--state-active btn-lg fs-26 fw-medium shadow"  data-aos="fade-left">
+                                        <?php esc_html_e('Our Services','medplus');?>
+                                    </a>
+                                        <a  href="<?php echo home_url('/medical-specialities') ?>" class="button btn-lg fs-26 fw-medium shadow"  data-aos="fade-down"><?php esc_html_e('View Our Doctors','medplus');?></a>
                                 </div>
                             </div>
                         </div>
@@ -131,24 +130,15 @@ $container = get_theme_mod( 'medplus_container_type' );
                 <div class="carousel staff__slider slide my-5" id="carouselExampleCaptions" data-bs-ride="carousel">
                     <div class="container">
                         <div class="carousel-inner">
-
-                         
-
                             <?php
-                                  
                                      $doctorTerm = get_terms( array(
                                         'taxonomy' => 'area',
                                     ) );
-        
-        
+    
                                        $typeTerm = array(); 
                                         foreach($doctorTerm as $term){
-        
                                             array_push($typeTerm, $term->name);
-                                           
                                         }
-
-
                                         $args = array(
                                             'post_type'      => 'doctor',
                                             'posts_per_page' => 10,
@@ -248,12 +238,12 @@ $container = get_theme_mod( 'medplus_container_type' );
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
+                            <span class="visually-hidden"><?php esc_html_e('Previous','medplus');?></span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
+                            <span class="visually-hidden"><?php esc_html_e('Next','medplus'); ?></span>
                         </button>
                     </div>
                 </div>
@@ -263,14 +253,14 @@ $container = get_theme_mod( 'medplus_container_type' );
                 <section class="py-5 bg-clr-gray" id="featured">
                     <div class="container">
                         <div class="feature__caption text-center">
-                            <h2 class="fs-24 fw-bold feature__caption--line" data-aos="fade-up">Before & After Gallery <?php echo get_theme_mod( 'medplus_gallary_section_title_setting');?></h2>
-                            <p class="w-50 fs-18 fw-normal mx-auto" data-aos="fade-up">Lorem Ipsum is simply dummy text of the pritting industry.
-                                Lorem
-                                Ipsum has been the the 1500s,ining It was popularised in the 1960s w
+                            <h2 class="fs-24 fw-bold feature__caption--line" data-aos="fade-up"> <?php echo get_theme_mod( 'medplus_gallary_section_title_setting');?></h2>
+                            <p class="w-50 fs-18 fw-normal mx-auto" data-aos="fade-up">
+                               
                                 <?php echo get_theme_mod( 'medplus_gallary_section_subtitle_setting');?>
                             </p>
-                            <a class="fs-20 fw-semibold clr-text text-decoration-underline pb-4" data-aos="fade-up" href="#" type="button">View
-                                All</a>
+                            <a class="fs-20 fw-semibold clr-text text-decoration-underline pb-4" data-aos="fade-up" href="#" type="button">
+                                        <?php esc_html_e('View All','medplus'); ?>
+                            </a>
                             <img class="img-fluid" data-aos="fade-right" src=" <?php echo get_theme_mod( 'medplus_gallery_image_setting');?>" alt="Before & After Treatment">
                         </div>
                     </div>
@@ -279,117 +269,8 @@ $container = get_theme_mod( 'medplus_container_type' );
                 <!-- === **** Section Appoitment *** ===  -->
                 <section class="py-5 bg-white" id="appointment">
                     <div class="container">
-                        <h3 class="fs-24 fw-bold clr-text pb-4" data-aos="fade-up">Make An Appoitment</h3>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <form data-aos="fade-left">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label fs-18 fw-medium">Full Name*</label>
-                                        <input type="Name" class="form-control shadow border-0" id="" name=""
-                                            aria-describedby="name">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="PhoneNumber" class="form-label fs-18 fw-medium">Phone Number*</label>
-                                        <input type="Phone" class="form-control shadow border-0" id="" name=""
-                                            aria-describedby="Phone Number">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="Service" class="form-label fs-18 fw-medium">Choose Service*</label>
-                                        <select class="form-select form-control shadow border-0" aria-label="select example">
-                                            <option selected>Service</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="Textarea" class="form-label fs-18 fw-medium">Notes</label>
-                                        <textarea class="form-control shadow border-0" id="" name="" rows="5"
-                                            placeholder="Write your notes here...." required></textarea>
-                                    </div>
-                                    <button data-aos="fade-down"
-                                        class="button button--state-active fs-20 fw-bold shadow rounded-10 float-end mt-3 d-md-block d-none"
-                                        style="width: 290px;">Confirm</button>
-                                </form>
-                            </div>
-                            <!-- Calander Appoitment -->
-                            <div class="col-md-6" data-aos="fade-right">
-                                <table class="calander w-100 h-100 shadow border text-center">
-                                    <thead>
-                                        <tr>
-                                            <th colspan="7">
-                                                <span class="btn-group d-flex justify-content-between py-4">
-                                                    <a class="btn"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/arrow-left.png"
-                                                            alt="arrow calander left"></i></a>
-                                                    <h4 class="fs-26 fw-semibold">December 2022</h4>
-                                                    <a class="btn"><img class="img-fluid" src="<?php echo get_template_directory_uri() ?>./assets/images/arrow-right.png"
-                                                            alt="arrow calander left"></i></a>
-                                                </span>
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <th>Su</th>
-                                            <th>Mo</th>
-                                            <th>Tu</th>
-                                            <th>We</th>
-                                            <th>Th</th>
-                                            <th>Fr</th>
-                                            <th>Sa</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="muted">29</td>
-                                            <td class="muted">30</td>
-                                            <td class="muted">31</td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>4</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>6</td>
-                                            <td>7</td>
-                                            <td>8</td>
-                                            <td>9</td>
-                                            <td>10</td>
-                                            <td>11</td>
-                                        </tr>
-                                        <tr>
-                                            <td>12</td>
-                                            <td>13</td>
-                                            <td>14</td>
-                                            <td>15</td>
-                                            <td>16</td>
-                                            <td>17</td>
-                                            <td>18</td>
-                                        </tr>
-                                        <tr>
-                                            <td>19</td>
-                                            <td class="btn-primary"><strong>20</strong></td>
-                                            <td>21</td>
-                                            <td>22</td>
-                                            <td>23</td>
-                                            <td>24</td>
-                                            <td>25</td>
-                                        </tr>
-                                        <tr>
-                                            <td>26</td>
-                                            <td>27</td>
-                                            <td>28</td>
-                                            <td>29</td>
-                                            <td class="muted">1</td>
-                                            <td class="muted">2</td>
-                                            <td class="muted">3</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <button
-                                class="button button--state-active fs-20 fw-bold shadow rounded-10 float-end mt-4 d-md-none d-block mx-auto"
-                                style="width: 290px;">Confirm</button>
-                        </div>
+                        <h3 class="fs-24 fw-bold clr-text pb-4" data-aos="fade-up"><?php esc_html_e('Make An Appoitment','medplus');?></h3>
+                        <?php echo do_shortcode("[booking type=1 nummonths=1 form_type='standard']");?>
                     </div>
                 </section>
 
@@ -409,7 +290,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                                 <strong><?php echo get_theme_mod( 'medplus_about_section_doctor_counter_setting');?>+</strong>
                                             </li>
                                             <li class="fs-23 text-center text-md-start py-1 fw-semibold" data-aos="fade-up">
-                                                <strong>Doctors</strong>
+                                                <strong><?php esc_html( 'Doctors', 'medplus' )?></strong>
                                             </li>
                                         </ul>
                                         <ul>
@@ -417,7 +298,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                                 <strong><?php echo get_theme_mod( 'medplus_about_section_patient_counter_setting');?>+</strong>
                                             </li>
                                             <li class="fs-23 text-center text-md-start py-1 fw-semibold" data-aos="fade-up">
-                                                <strong>Patients</strong>
+                                                <strong><?php esc_html_e('Patients','medplus'); ?></strong>
                                             </li>
                                         </ul>
                                     </div>
@@ -426,15 +307,17 @@ $container = get_theme_mod( 'medplus_container_type' );
                                             <li class="fs-23 text-center text-md-start py-1 fw-bold clr-text" data-aos="fade-left">
                                                 <strong><?php echo get_theme_mod('medplus_about_section_nurse_counter_setting'); ?>+</strong>
                                             </li>
-                                            <li class="fs-23 text-center text-md-start py-1 fw-semibold" data-aos="fade-left"><strong>Nurses</strong>
+                                            <li class="fs-23 text-center text-md-start py-1 fw-semibold" data-aos="fade-left"><strong><?php esc_html_e('Nurses','medplus');?></strong>
                                             </li>
                                         </ul>
                                         <ul>
                                             <li class="fs-23 text-center text-md-start py-1 fw-bold clr-text" data-aos="fade-up">
                                                 <strong><?php echo get_theme_mod('medplus_about_section_case_studies_counter_setting');?>+</strong>
                                             </li>
-                                            <li class="fs-23 text-center text-md-start py-1 fw-semibold" data-aos="fade-up"><strong>Case
-                                                    Studeis</strong></li>
+                                            <li class="fs-23 text-center text-md-start py-1 fw-semibold" data-aos="fade-up"><strong>
+                                                <?php esc_html_e('Case
+                                                    Studeis', 'medplus'); ?>
+                                            </strong></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -458,10 +341,12 @@ $container = get_theme_mod( 'medplus_container_type' );
                 <section class="my-5" id="testimonials">
                     <div class="container">
                         <div class="testimonial__head">
-                            <h2 class="fs-24 fw-bold clr-text" data-aos="fade-right">Testimonials</h2>
-                            <p class="fs-18 fw-normal m-0" data-aos="fade-left">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                unknown printer took.</p>
+                            <h2 class="fs-24 fw-bold clr-text" data-aos="fade-right"><?php esc_html_e('Testimonials','medplus'); ?></h2>
+                            <p class="fs-18 fw-normal m-0" data-aos="fade-left">
+                               <?php esc_html_e('Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an
+                                unknown printer took.', 'medplus');?>
+                            </p>
                         </div>
                         <div class="testimonial__slider">
                             <!-- Testimonial (Slide_1)-->
@@ -512,9 +397,36 @@ $container = get_theme_mod( 'medplus_container_type' );
                 </section>
         </main>
 
-    <script src="<?php echo get_template_directory_uri()?>./assets/js/aos.js"></script>
-    <script src="<?php echo get_template_directory_uri()?>./assets/js/slick.min.js"></script>
+         <!--*** Show Modal ***-->
+         <div class="modal fade " id="bookingSubmission" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="rounded-20 bg-white">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close m-0" style="opacity:inherit;" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center px-5 py-0 m-0">
+                            <img class="img-fluid" src="<?php get_template_directory_uri()?>./assets/images/success.png" alt="Appointment Booked Successfully">
+                            <h2 class="fs-22 fw-semibold pt-3">
+                                <?php esc_html_e('Your appointment','medplus'); ?>
+                                <?php
+                                esc_html_e(' has been booked successfully!','medplus');
+                                ?>
+                        </h2>
+                        </div>
+                        <div class="modal-footer text-center px-5 border-0 pt-0 pb-4">
+                            <p class="fs-18 fw-normal clr-gray">
+                                <?php 
+                                esc_html_e('A message will be sent ', 'medplus');
+                                esc_html_e('A message will be sent to  to confirm the booking...', 'medplus');
+                                ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+         </div>
 
+  
     <script>
         AOS.init();
 

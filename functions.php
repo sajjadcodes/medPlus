@@ -453,3 +453,116 @@ function create_group_tax() {
 
 }
 add_action( 'init', 'create_group_tax' );
+
+
+// Register Custom Post Type Branch
+function create_branch_cpt() {
+
+	$labels = array(
+		'name' => _x( 'Branches', 'Post Type General Name', 'medplus' ),
+		'singular_name' => _x( 'Branch', 'Post Type Singular Name', 'medplus' ),
+		'menu_name' => _x( 'Branches', 'Admin Menu text', 'medplus' ),
+		'name_admin_bar' => _x( 'Branch', 'Add New on Toolbar', 'medplus' ),
+		'archives' => __( 'Branch Archives', 'medplus' ),
+		'attributes' => __( 'Branch Attributes', 'medplus' ),
+		'parent_item_colon' => __( 'Parent Branch:', 'medplus' ),
+		'all_items' => __( 'All Branches', 'medplus' ),
+		'add_new_item' => __( 'Add New Branch', 'medplus' ),
+		'add_new' => __( 'Add New', 'medplus' ),
+		'new_item' => __( 'New Branch', 'medplus' ),
+		'edit_item' => __( 'Edit Branch', 'medplus' ),
+		'update_item' => __( 'Update Branch', 'medplus' ),
+		'view_item' => __( 'View Branch', 'medplus' ),
+		'view_items' => __( 'View Branches', 'medplus' ),
+		'search_items' => __( 'Search Branch', 'medplus' ),
+		'not_found' => __( 'Not found', 'medplus' ),
+		'not_found_in_trash' => __( 'Not found in Trash', 'medplus' ),
+		'featured_image' => __( 'Featured Image', 'medplus' ),
+		'set_featured_image' => __( 'Set featured image', 'medplus' ),
+		'remove_featured_image' => __( 'Remove featured image', 'medplus' ),
+		'use_featured_image' => __( 'Use as featured image', 'medplus' ),
+		'insert_into_item' => __( 'Insert into Branch', 'medplus' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this Branch', 'medplus' ),
+		'items_list' => __( 'Branches list', 'medplus' ),
+		'items_list_navigation' => __( 'Branches list navigation', 'medplus' ),
+		'filter_items_list' => __( 'Filter Branches list', 'medplus' ),
+	);
+	$args = array(
+		'label' => __( 'Branch', 'medplus' ),
+		'description' => __( '', 'medplus' ),
+		'labels' => $labels,
+		'menu_icon' => 'dashicons-admin-multisite',
+		'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
+		'taxonomies' => array(),
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'menu_position' => 5,
+		'show_in_admin_bar' => true,
+		'show_in_nav_menus' => true,
+		'can_export' => true,
+		'has_archive' => true,
+		'hierarchical' => false,
+		'exclude_from_search' => false,
+		'show_in_rest' => true,
+		'publicly_queryable' => true,
+		'capability_type' => 'post',
+	);
+	register_post_type( 'branch', $args );
+
+}
+add_action( 'init', 'create_branch_cpt', 0 );
+
+function wporg_add_custom_box() {
+    $screens = ['branch' ];
+    foreach ( $screens as $screen ) {
+        add_meta_box(
+            'wporg_box_id',                 // Unique ID
+            'Branch Opening & Closing Times',      // Box title
+            'branch_monday_html',  // Content callback, must be of type callable
+            $screen                            // Post type
+        );
+    }
+}
+add_action( 'add_meta_boxes', 'wporg_add_custom_box' );
+
+function branch_monday_html( $post ) {
+	$mon_fri_time = get_post_meta( $post->ID, 'monday_to_friday', true );
+	$sat_time = get_post_meta( $post->ID, 'saturday_time', true );
+	$sun_time = get_post_meta( $post->ID, 'sunday_time', true );
+
+    ?>
+    <label for="wporg_field">Monday - Friday</label><br>
+    <input type="text" value="<?php echo ($mon_fri_time =='') ? "" : $mon_fri_time ; ?>" name="monday_to_friday" id="monday_to_friday" required="required"><br>
+	<label for="wporg_field">Saturday</label><br>
+    <input type="text" value="<?php echo ($sat_time =='') ? "" : $sat_time ; ?>" name="saturday_time" id="saturday_time" required="required"><br>
+	<label for="wporg_field">Sunday</label><br>
+    <input type="text" value="<?php echo ($sun_time =='') ? "" : $sun_time ; ?>" name="sunday_time" id="sunday_time" required="required">
+    <?php
+}
+
+// saving values
+function branch_save_postdata( $post_id ) {
+    if ( array_key_exists( 'monday_to_friday', $_POST ) ) {
+        update_post_meta(
+            $post_id,
+            'monday_to_friday',
+            $_POST['monday_to_friday']
+        );
+    }
+	if ( array_key_exists( 'saturday_time', $_POST ) ) {
+        update_post_meta(
+            $post_id,
+            'saturday_time',
+            $_POST['saturday_time']
+        );
+    }
+	if ( array_key_exists( 'sunday_time', $_POST ) ) {
+        update_post_meta(
+            $post_id,
+            'sunday_time',
+            $_POST['sunday_time']
+        );
+    }
+}
+add_action( 'save_post', 'branch_save_postdata' );

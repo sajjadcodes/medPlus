@@ -67,6 +67,14 @@ $('.testimonial__slider').slick({
     }]
 });
 
+$(document).on('click','.branch_address',function(){
+    if ($('#branch_address_form_field').length) {
+        $('#branch_address_form_field').val($(this).attr('data-id'))
+    }else{
+        $('#booking_form1').append("<input type='hidden' name='branch_address_form_field' id='branch_address_form_field'>")
+        $('#branch_address_form_field').val($(this).attr('data-id'))
+    }
+});
 
 
 //mySidenav

@@ -9350,6 +9350,14 @@
 	      slidesToScroll: 1
 	    }
 	  }]
+	});
+	$__default["default"](document).on('click', '.branch_address', function () {
+	  if ($__default["default"]('#branch_address_form_field').length) {
+	    $__default["default"]('#branch_address_form_field').val($__default["default"](this).attr('data-id'));
+	  } else {
+	    $__default["default"]('#booking_form1').append("<input type='hidden' name='branch_address_form_field' id='branch_address_form_field'>");
+	    $__default["default"]('#branch_address_form_field').val($__default["default"](this).attr('data-id'));
+	  }
 	}); //mySidenav
 
 	exports.Alert = alert$1;
