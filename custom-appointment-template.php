@@ -16,8 +16,8 @@ get_header();
                         <?php the_archive_description( '<p class="w-50 fs-18 fw-normal mx-auto">', '</p>' ); ?>
                 </article>
 
-            <article class="overflow-hidden pt-4">
-                <div class="row row-cols-1 row-cols-md-3 g-2 g-md-3 text-center">
+            <article class="overflow-hidden pt-4 mb-5">
+                <div class="row row-cols-1 row-cols-md-4 g-2 g-md-3 text-center">
                  <?php
                             $args = array(
                                 'post_type'      => 'branch',
@@ -38,9 +38,9 @@ get_header();
                                 <p class="fs-16 fw-normal pt-4">
                                         <?php the_content();?>
                                 </p>
-                                <p><i class='fa fa-clock-o'></i> Monday - Friday <?php echo get_post_meta(get_the_id(),'monday_to_friday',true);?></p>
-                                <p><i class='fa fa-clock-o'></i> Saturday <?php echo get_post_meta(get_the_id(),'saturday_time',true);?></p>
-                                <p><i class='fa fa-clock-o'></i> Sunday <?php echo get_post_meta(get_the_id(),'sunday_time',true);?></p>
+                                <p><i class='fa fa-clock-o'></i> <?php esc_html_e('Monday - Friday ','medplus')?>  <?php echo get_post_meta(get_the_id(),'monday_to_friday',true);?></p>
+                                <p><i class='fa fa-clock-o'></i> <?php esc_html_e('Saturday ','medplus')?> <?php echo get_post_meta(get_the_id(),'saturday_time',true);?></p>
+                                <p><i class='fa fa-clock-o'></i><?php esc_html_e('Sunday ','medplus')?>  <?php echo get_post_meta(get_the_id(),'sunday_time',true);?></p>
                             </div>
                         </div>
                             <?php
@@ -49,7 +49,10 @@ get_header();
                
                 <!-- </article> -->
                         </article>
-                        <?php echo do_shortcode("[booking type=1 nummonths=1 form_type='standard']");?>
+                        <div class="booking-form pt-5">
+                             <?php echo do_shortcode("[booking type=1 nummonths=1 form_type='standard']");?>
+                        </div>
+
 
                         </div>
             </div>
