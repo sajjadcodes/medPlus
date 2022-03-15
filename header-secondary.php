@@ -31,7 +31,7 @@ $navbar_type       = get_theme_mod( 'medplus_navbar_type', 'collapse' );
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MEDPLUS Clinic</title>
+    <title><?php bloginfo('title');?></title>
 </head>
 
 

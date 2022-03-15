@@ -41,7 +41,7 @@ $container = get_theme_mod( 'medplus_container_type' );
 
                 <!-- About Us(Footer) -->
                 <div class="col-md-2 col-6 text-white">
-                    <h4 class="fs-20 fw-normal text-white">About Us</h4>
+                    <h4 class="fs-20 fw-normal text-white"><?php esc_html_e("About Us","medplus"); ?></h4>
                     <ul>
                         <li class="py-2 fs-18 fw-normal clr-gray">Our Mission, Vision and Values</li>
                         <li class="py-2 fs-18 fw-normal clr-gray">Transformation</li>
@@ -53,41 +53,45 @@ $container = get_theme_mod( 'medplus_container_type' );
 
                 <!-- Our Services(Footer) -->
                 <div class="col-md-2 col-6 text-white">
-                    <h4 class="fs-20 fw-normal text-white">Our Services</h4>
+                    <h4 class="fs-20 fw-normal text-white"><?php esc_html_e("Our Services","medplus"); ?></h4>
                     <ul>
-                        <li class="py-2 fs-18 fw-normal clr-gray">General Dentistry</li>
+
+
+                        <!-- <li class="py-2 fs-18 fw-normal clr-gray">General Dentistry</li>
                         <li class="py-2 fs-18 fw-normal clr-gray">Orthodontics</li>
                         <li class="py-2 fs-18 fw-normal clr-gray">Dental Implant</li>
                         <li class="py-2 fs-18 fw-normal clr-gray">Teeth Whitening </li>
                         <li class="py-2 fs-18 fw-normal clr-gray">Gum Treatment </li>
-                        <li class="py-2 fs-18 fw-normal clr-gray">Emergency</li>
+                        <li class="py-2 fs-18 fw-normal clr-gray">Emergency</li> -->
+                        <?php
+										wp_nav_menu(
+											array(
+												'theme_location'  => 'services',
+												// 'container_class' => 'col-md-2 col-6 text-white',
+												'container_id'    => '',
+												// 'menu_class'      => 'px-4 nav-item',
+												'fallback_cb'     => '',
+												'menu_id'         => 'main-menu',
+												// 'items_wrap'      => '',
+												'depth'           => 2,
+												'walker'          => new Medplus_WP_Bootstrap_Navwalker(),
+											)
+										);
+								?>
                     </ul>
                 </div>
 
                 <!-- Our Services(Footer) -->
                 <div class="col-md-4 text-white">
-                    <h4 class="fs-20 fw-normal text-white">Working Hours</h4>
+                    <h4 class="fs-20 fw-normal text-white"><?php esc_html_e("Working Hours","medplus"); ?></h4>
                     <time class="py-2 d-flex align-items-center justify-content-between">
                         <span class="d-flex align-items-center">
                             <img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/clock.png" alt="Phone contact Mediplus">
-                            <p class="fs-18 fw-normal m-0">+Monday - Friday <?php echo get_theme_mod('medplus_footer_weekday_setting');?></p>
+                            <p class="fs-18 fw-normal m-0"> <?php esc_html_e("+Monday - Friday","medplus"); ?> <?php echo get_theme_mod('medplus_footer_weekday_setting');?></p>
                         </span>
                         <p class="fs-18 fw-normal m-0"><?php echo get_theme_mod('medplus_footer_start_time_setting');?> - <?php echo get_theme_mod('medplus_footer_end_time_setting');?></p>
                     </time>
-                    <time class="py-2 d-flex align-items-center justify-content-between">
-                        <span class="d-flex align-items-center">
-                            <img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/clock.png" alt="Phone contact Mediplus">
-                            <p class="fs-18 fw-normal m-0">+Saturday</p>
-                        </span>
-                        <p class="fs-18 fw-normal m-0">9:00 - 4:00</p>
-                    </time>
-                    <time class="py-2 d-flex align-items-center justify-content-between">
-                        <span class="d-flex align-items-center">
-                            <img class="img-fluid pe-3" src="<?php echo get_template_directory_uri() ?>./assets/images/clock.png" alt="Phone contact Mediplus">
-                            <p class="fs-18 fw-normal m-0">+Sunday</p>
-                        </span>
-                        <p class="fs-18 fw-normal m-0">9:00 - 4:00</p>
-                    </time>
+                   
                 </div>
             </div>
         </div>

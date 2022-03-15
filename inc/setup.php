@@ -47,7 +47,9 @@ if ( ! function_exists( 'medplus_setup' ) ) {
 		register_nav_menus(
 			array(
 				'primary' => __( 'Primary Menu', 'medplus' ),
+				'services' => __( 'Services Menu', 'medplus' ),
 			)
+		
 		);
 
 		/*

@@ -34,7 +34,7 @@
 		return a;
 	}
 
-	var alert$2 = {exports: {}};
+	var alert$1 = {exports: {}};
 
 	var eventHandler = {exports: {}};
 
@@ -853,9 +853,9 @@
 
 	}));
 
-	}(alert$2));
+	}(alert$1));
 
-	var alert$1 = alert$2.exports;
+	var alert = alert$1.exports;
 
 	var button$1 = {exports: {}};
 
@@ -9306,7 +9306,6 @@
 	$__default["default"](document).ready(function () {
 	  // active and inactive menu items
 	  $__default["default"]('ul li a').click(function () {
-	    alert("menu click");
 	    $__default["default"]('.active').css("border-bottom-color", "#fff");
 	    $__default["default"]('ul li a').removeClass("active");
 	    $__default["default"](this).addClass("active");
@@ -9360,7 +9359,7 @@
 	  }
 	}); //mySidenav
 
-	exports.Alert = alert$1;
+	exports.Alert = alert;
 	exports.Button = button;
 	exports.Carousel = carousel;
 	exports.Collapse = collapse;

@@ -91,8 +91,8 @@ defined( 'ABSPATH' ) || exit;
                        
 
                     <form class="d-flex">
-                        <button class="button button--state-active fs-20 fw-bold rounded-10" type="submit">Make
-                            Appointment</button>
+                        <a class="button button--state-active fs-20 fw-bold rounded-10" href="<?php echo esc_url( home_url( '/appointment' ) ); ?>">Make
+                            Appointment</a>
                     </form>
                 </div>
             </div>

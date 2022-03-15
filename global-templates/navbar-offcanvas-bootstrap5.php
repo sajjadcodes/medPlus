@@ -83,8 +83,8 @@ $container = get_theme_mod( 'medplus_container_type' );
                    
                 </div>
                 <form class="d-lg-flex d-none">
-                    <button class="button button--state-active fs-20 fw-bold rounded-10 shadow" type="submit">Make
-                        Appointment</button>
+                    <a class="button button--state-active fs-20 fw-bold rounded-10 shadow" href="<?php echo esc_url( home_url( '/appointment' ) ); ?>">Make
+                        Appointment</a>
                 </form>
                 <!-- Header Nav For Mobile View -->
                 <div class="mobile__menu d-lg-none d-block">

@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
 						<?php if ( 'post' === get_post_type() ) : ?>
 
 								<div class="entry-meta">
-									<?php medplus_posted_on(); ?>
+									<span><?php _e('Published On ','medplus'); ?> <?php echo get_the_date('d M Y'); ?>/<?php gt_set_post_view(); ?></span>
 								</div><!-- .entry-meta -->
 
 						<?php endif; ?>
@@ -49,15 +49,11 @@ defined( 'ABSPATH' ) || exit;
 								<?php 
 								// medplus_entry_footer(); 
 								?>
-							   <div class="blog--footer d-flex align-items-center pt-2">
+							   	<div class="blog--footer d-flex align-items-center pt-2">
 
 										<span class="fs-16 fw-normal clr-text-light d-flex align-items-center">
-											<img class="img-fluid pe-2" src="<?php get_template_directory_uri(); ?>./assets/images/news-icon.png" alt="mediPlus Blog Business">
-											Blog, Business
-										</span>
-										<span class="fs-16 fw-normal clr-text-light d-flex align-items-center ps-5">
-											<img class="img-fluid pe-2" src="<?php get_template_directory_uri(); ?>./assets/images/news-icon.png" alt="mediPlus Blog News">
-											Magazine, News
+											<img class="img-fluid pe-2" src="<?php echo  get_template_directory_uri(); ?>./assets/images/news-icon.png" alt="mediPlus Blog Business">
+											<?php the_category(",");?>
 										</span>
 								</div>
 

@@ -14,7 +14,7 @@ $(document).ready(function(){
 
     // active and inactive menu items
     $('ul li a').click(function(){
-        alert("menu click");
+        
         $('.active').css("border-bottom-color", "#fff");
         $('ul li a').removeClass("active");
         $(this).addClass("active");

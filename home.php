@@ -19,13 +19,21 @@ get_header('secondary');
 $container = get_theme_mod( 'medplus_container_type' );
 ?>
 
-<?php if ( is_front_page() && is_home() ) : ?>
-	<?php get_template_part( 'global-templates/hero' ); ?>
-<?php endif; ?>
 
-<div class="wrapper" id="index-wrapper">
+
+<div class="wrapper my-5" id="index-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+
+	<article class="text-center">
+	
+		<h2 class="fs-24 fw-bold feature__caption--line">
+			<?php echo esc_html__('Medical Articles','medplus')?>
+		</h2>
+		
+		 <?php the_archive_description( '<p class="w-50 fs-18 fw-normal mx-auto">', '</p>' ); ?>
+ 	</article>
+
 
 		<div class="row">
 

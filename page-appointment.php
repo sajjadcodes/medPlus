@@ -1,6 +1,6 @@
 <?php
 /* Template Name: Custom Appointment Template */
-get_header();
+get_header('secondary');
 ?>
 <main>
         <!-- === **** Our Services *** ===  -->
@@ -9,11 +9,12 @@ get_header();
                 <!-- Our services (head) -->
                 <article class="text-center">
      
-                    <h2 class="fs-24 fw-bold feature__caption--line"><?php echo post_type_archive_title( '', false );?></h2>
-                    <p class="w-50 fs-18 fw-normal mx-auto">Lorem Ipsum is simply dummy text of the pritting industry.
-                        Lorem
-                        Ipsum has been the the 1500s,ining It was popularised in the 1960s w</p>
-                        <?php the_archive_description( '<p class="w-50 fs-18 fw-normal mx-auto">', '</p>' ); ?>
+                    <h2 class="fs-24 fw-bold feature__caption--line"><?php esc_html_e( 'Make an Appointment')?></h2>
+                    <p class="w-50 fs-18 fw-normal mx-auto">
+                       
+                        <?php esc_html_e( ' Lorem Ipsum is simply dummy text of the pritting industry.Lorem Ipsum has been the the 1500s,ining It was popularised in the 1960s')?>
+                    </p>
+                        
                 </article>
 
             <article class="overflow-hidden pt-4 mb-5">

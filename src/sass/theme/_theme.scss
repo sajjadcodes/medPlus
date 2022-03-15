@@ -243,6 +243,27 @@ li > a:hover{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+// calander styles
+.wpbc_change_over_triangle{
+    border-radius: 20px 20px 0 0 !important;
+   
+}
+.wpbc_times_selector{
+    border-radius: 20px !important;
+    background-color:#EBF5Ff;
+    padding:30px;
+    right: -105% !important;
+    bottom: -10px !important;
+    z-index: 0;
+    border-radius: 0 0 20px 20px !important;
+
+}
+
+
+
+
+
+
 /* Mobile Button */
 .mobile_btn_slider .carousel-indicators{
     bottom: -3rem !important;

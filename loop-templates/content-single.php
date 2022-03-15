@@ -15,10 +15,9 @@ defined( 'ABSPATH' ) || exit;
 					<?php echo get_the_post_thumbnail( $post->ID, 'large', array('class' => 'img-fluid') ); ?>
 							<span class="fs-16 fw-normal clr-text-light pt-4 d-block">
 								<i>
-									Published on 29 Dec 2021 / 1K views
-									<?php medplus_posted_on(); ?>
+									<span><?php _e('Published On ','medplus'); ?> <?php echo get_the_date('d M Y'); ?>/<?php gt_set_post_view(); ?></span>
 								</i>
-								</span>
+							</span>
 					
 							<?php the_title( '<h3 class="fs-26 fw-semibold clr-text my-3">', '</h3>' ); ?>
 							<p class="fs-18 fw-normal">
@@ -27,22 +26,18 @@ defined( 'ABSPATH' ) || exit;
 										medplus_link_pages();
 									?>
 							</p>
-							<div class="blog--footer d-flex align-items-center pt-2">
-								<span class="fs-16 fw-normal clr-text-light d-flex align-items-center">
-									<img class="img-fluid pe-2" src="./assets/images/news-icon.png"
-										alt="mediPlus Blog Business">Blog, Business
-								</span>
-								<span class="fs-16 fw-normal clr-text-light d-flex align-items-center ps-5">
-									<img class="img-fluid pe-2" src="./assets/images/news-icon.png"
-										alt="mediPlus Blog News">Magazine, News
-								</span>
+							
+
 						<footer class="entry-footer">
+						<div class="blog--footer d-flex align-items-center pt-2">
 
-							<?php 
-							// medplus_entry_footer(); 
-							?>
+							<span class="fs-16 fw-normal clr-text-light d-flex align-items-center">
+								<img class="img-fluid pe-2" src="<?php echo  get_template_directory_uri(); ?>./assets/images/news-icon.png" alt="">
+								<?php the_category(",");?>
+							</span>
+						</div>	
 
-						</footer>.entry-footer
+						</footer>
 				</article><!-- #post-## -->
 
 
