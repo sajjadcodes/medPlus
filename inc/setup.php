@@ -48,6 +48,7 @@ if ( ! function_exists( 'medplus_setup' ) ) {
 			array(
 				'primary' => __( 'Primary Menu', 'medplus' ),
 				'services' => __( 'Services Menu', 'medplus' ),
+				'about' => __( 'About Us Menu', 'medplus' ),
 			)
 		
 		);

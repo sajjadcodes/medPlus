@@ -16001,9 +16001,7 @@ li > a:hover {
 
 /* box shadow */
 .shadow {
-  box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.18);
-  -webkit-box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.18);
-  -moz-box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 2px 4px 0 #00000010 !important;
 }
 
 /* services widget */
@@ -16097,7 +16095,7 @@ li > a:hover {
   user-select: none;
   color: #fff;
   z-index: 99;
-  border: 1px solid #fff;
+  border: 4px solid #fff;
   background-color: transparent;
   transition: 0.15s ease-in-out;
   padding: 12px 18px;
@@ -16191,6 +16189,50 @@ li > a:hover {
   border-radius: 0 0 20px 20px !important;
 }
 
+.wpdevelop .form-control, .wpdevelop .widget_categories select, .widget_categories .wpdevelop select,
+.wpdevelop .widget_archive select,
+.widget_archive .wpdevelop select, .wpdevelop .wpcf7 input[type=text], .wpcf7 .wpdevelop input[type=text],
+.wpdevelop .wpcf7 input[type=search],
+.wpcf7 .wpdevelop input[type=search],
+.wpdevelop .wpcf7 input[type=url],
+.wpcf7 .wpdevelop input[type=url],
+.wpdevelop .wpcf7 input[type=tel],
+.wpcf7 .wpdevelop input[type=tel],
+.wpdevelop .wpcf7 input[type=number],
+.wpcf7 .wpdevelop input[type=number],
+.wpdevelop .wpcf7 input[type=range],
+.wpcf7 .wpdevelop input[type=range],
+.wpdevelop .wpcf7 input[type=date],
+.wpcf7 .wpdevelop input[type=date],
+.wpdevelop .wpcf7 input[type=month],
+.wpcf7 .wpdevelop input[type=month],
+.wpdevelop .wpcf7 input[type=week],
+.wpcf7 .wpdevelop input[type=week],
+.wpdevelop .wpcf7 input[type=time],
+.wpcf7 .wpdevelop input[type=time],
+.wpdevelop .wpcf7 input[type=datetime],
+.wpcf7 .wpdevelop input[type=datetime],
+.wpdevelop .wpcf7 input[type=datetime-local],
+.wpcf7 .wpdevelop input[type=datetime-local],
+.wpdevelop .wpcf7 input[type=color],
+.wpcf7 .wpdevelop input[type=color],
+.wpdevelop .wpcf7 input[type=email],
+.wpcf7 .wpdevelop input[type=email],
+.wpdevelop .wpcf7 input[type=file],
+.wpcf7 .wpdevelop input[type=file],
+.wpdevelop .wpcf7 input[type=submit],
+.wpcf7 .wpdevelop input[type=submit],
+.wpdevelop .wpcf7 select,
+.wpcf7 .wpdevelop select,
+.wpdevelop .wpcf7 textarea,
+.wpcf7 .wpdevelop textarea, .wpdevelop .wpcf7 .wpcf7-validation-errors, .wpcf7 .wpdevelop .wpcf7-validation-errors {
+  border: 0.5px solid #d7d5d5 !important;
+}
+
+.datepick-inline .date_available {
+  background-color: green;
+}
+
 /* Mobile Button */
 .mobile_btn_slider .carousel-indicators {
   bottom: -3rem !important;
@@ -16228,33 +16270,6 @@ li > a:hover {
   top: 50%;
   left: 50%;
   margin: -175px 0 0 -175px;
-}
-
-.staff__slider .carousel-control-prev {
-  left: 190px;
-}
-
-.staff__slider .carousel-control-next {
-  right: 190px;
-}
-
-.staff__slider .carousel-control-next,
-.staff__slider .carousel-control-prev {
-  opacity: inherit !important;
-}
-
-.staff__slider .carousel-control-prev-icon {
-  background: url("../images/arrow-left.png") 0 0/100% 100% no-repeat;
-  width: 0.75rem;
-  height: 1rem;
-  opacity: inherit !important;
-}
-
-.staff__slider .carousel-control-next-icon {
-  background: url("../images/arrow-right.png") 0 0/100% 100% no-repeat;
-  width: 0.75rem;
-  height: 1rem;
-  opacity: inherit !important;
 }
 
 /* Section Featured */

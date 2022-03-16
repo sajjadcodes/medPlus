@@ -79,9 +79,9 @@ li > a:hover{
 /* box shadow */
 
 .shadow{
-    box-shadow: 0px 10px 21px 0px rgba(0,0,0,0.18);
-    -webkit-box-shadow: 0px 10px 21px 0px rgba(0,0,0,0.18);
-    -moz-box-shadow: 0px 10px 21px 0px rgba(0,0,0,0.18);
+    -webkit-box-shadow:0 2px 4px 0 #00000010 !important;
+    -moz-box-shadow: 0 2px 4px 0 #00000010 !important;
+    box-shadow: 0 2px 4px 0 #00000010 !important;
 }
 /* services widget */
 /* .service-widget{
@@ -169,7 +169,7 @@ li > a:hover{
     user-select: none;
     color: #fff;
     z-index: 99;
-    border: 1px solid #fff;
+    border: 4px solid #fff;
     background-color: transparent;
     transition: .15s ease-in-out;
     padding:12px 18px;
@@ -220,8 +220,7 @@ li > a:hover{
   }
 /* Section: Hero */
 .hero {
-    background:  linear-gradient(to bottom, rgba(255, 255, 255, 0.73), rgba(94, 99, 129, 0.52)), 
-    url(../images/Banner\ Mask.png) center top / cover no-repeat;
+    background:linear-gradient(to bottom, rgba(255, 255, 255, 0.73), rgba(94, 99, 129, 0.52)), url(../images/Banner\ Mask.png) center top / cover no-repeat;
     position: relative;
 
 }
@@ -258,9 +257,15 @@ li > a:hover{
     border-radius: 0 0 20px 20px !important;
 
 }
+// calander forms
+.wpdevelop .form-control{
 
+   border:0.5px solid #d7d5d5 !important;
+}
 
-
+.wpbc_timeslot_day_bg_as_available .datepick-inline .date_available{
+    background-color:green;
+}
 
 
 
@@ -301,29 +306,41 @@ li > a:hover{
     margin: -175px 0 0 -175px;
 }
 
-.staff__slider .carousel-control-prev{
-    left: 190px;
-}
-.staff__slider .carousel-control-next{
-    right: 190px;
-} 
-.staff__slider .carousel-control-next, 
-.staff__slider .carousel-control-prev{
-    opacity: inherit !important;
-}
-.staff__slider .carousel-control-prev-icon {
-    background: url("../images/arrow-left.png") 0 0/100% 100% no-repeat;
-    width: 0.75rem;
-    height: 1rem;
-    opacity: inherit !important;
-}
 
-.staff__slider .carousel-control-next-icon {
-    background: url("../images/arrow-right.png") 0 0/100% 100% no-repeat;
-    width: 0.75rem;
-    height: 1rem;
-    opacity: inherit !important;
-}
+
+// .staff__slider .carousel-control-prev{
+//     left: 190px;
+//     background-color:red;
+// }
+// .staff__slider .carousel-control-next{
+//     right: 190px;
+//     background-color:blue;
+// } 
+// .staff__slider .carousel-control-next, 
+// .staff__slider .carousel-control-prev{
+//     opacity: inherit !important;
+// }
+
+
+
+
+
+// .staff__slider .carousel-control-prev-icon {
+   
+//     background: url("/inc/images/arrow-right.png") 0 0/100% 100% no-repeat;
+//     width: 0.75rem;
+//     height: 1rem;
+//     opacity: inherit !important;
+    
+
+// }
+
+// .staff__slider .carousel-control-next-icon {
+//     background: url("/inc/images/arrow-right.png") 0 0/100% 100% no-repeat;
+//     width: 0.75rem;
+//     height: 1rem;
+//     opacity: inherit !important;
+// }
 /* Section Featured */
 .feature__caption--line::before,
 .feature__caption--line::after {
@@ -368,6 +385,9 @@ li > a:hover{
     border: 1px solid #1476E1;
     color: #1476E1 !important;
 }
+
+
+// Bookingform
 @media(max-width: 1600px) {
     .staff__slider .carousel-control-prev{
         left: 0px;

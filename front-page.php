@@ -25,7 +25,7 @@ $container = get_theme_mod( 'medplus_container_type' );
 
         <main>
 
-                <section class="hero" id="startchange" style="background-image: url(<?php echo get_theme_mod( 'medplus_hero_image_setting');?>)">
+                <section class="hero" id="startchange" style="background:linear-gradient(to bottom, rgba(255, 255, 255, 0.73), rgba(94, 99, 129, 0.52)), url(<?php echo get_theme_mod( 'medplus_hero_image_setting');?>) center top / cover no-repeat;">
                         <div class="overlay"></div>
                         <div class="container">
                             <div class="caption d-flex align-items-start flex-column justify-content-center">
@@ -116,7 +116,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                         type="button">
                                         <img class="img-fluid me-4" src="<?php echo get_template_directory_uri() ?>./assets/images/CapIcon.png"
                                             alt="Highly Trained Dentists">
-                                        Highly Trained Dentists
+                                        Highly Trained Dentistssssssss
                                     </button>
                                 </span>
                             </div>
@@ -242,7 +242,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
                             data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-next-icon" style="url('<?php echo get_template_directory_uri();?>inc/images/arrow-right.png')" aria-hidden="true"></span>
                             <span class="visually-hidden"><?php esc_html_e('Next','medplus'); ?></span>
                         </button>
                     </div>
@@ -360,6 +360,10 @@ $container = get_theme_mod( 'medplus_container_type' );
                            
                            while($testimonialQuery->have_posts()) {
                             $testimonialQuery->the_post();
+                            $meta_value = get_post_meta( get_the_ID(), 'testimonial_box_id', true );
+
+                              
+                              
                                ?>
 
                             <div  data-aos="zoom-in-up">
@@ -377,6 +381,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     <p class="fs-16 fw-normal m-0">
                                         <?php the_content(); ?>
                                     </p>
+                                    <!-- <?php echo "<h2>{$meta_value}</h2>";?> -->
                                 </div>
                             </div>
 

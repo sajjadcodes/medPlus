@@ -123,3 +123,45 @@ add_action( 'manage_posts_custom_column', 'gt_posts_custom_column_views' );
 // Get all custom post types
 
 
+
+
+function medplus_testimonail_add_custom_box() {
+    $screens = [ 'testimonial' ];
+    foreach ( $screens as $screen ) {
+        add_meta_box(
+            'wporg_box_id',                 // Unique ID
+            'Custom Meta Box Title',      // Box title
+            'wporg_custom_box_html',  // Content callback, must be of type callable
+            $screen                            // Post type
+        );
+    }
+}
+add_action( 'add_meta_boxes', 'medplus_testimonail_add_custom_box' );
+
+
+
+function wporg_custom_box_html( $post ) {
+	$value = get_post_meta( $post->ID, '_wporg_meta_key', true );
+    ?>
+    <label for="wporg_field">Rate out of 5</label>
+	
+    <select name="wporg_field" id="wporg_field" class="postbox">
+        <option value="1 <?php selected( $value, '1' ); ?>">1</option>
+        <option value="2 <?php selected( $value, '2' ); ?>">2</option>
+        <option value="3 <?php selected( $value, '3' ); ?>">3</option>
+        <option value="4 <?php selected( $value, '4' ); ?>">4</option>
+        <option value="5 <?php selected( $value, '5' ); ?>">5</option>
+    </select>
+    <?php
+}
+
+function wporg_save_postdata( $post_id ) {
+    if ( array_key_exists( 'wporg_field', $_POST ) ) {
+        update_post_meta(
+            $post_id,
+            '_wporg_meta_key',
+            $_POST['wporg_field']
+        );
+    }
+}
+add_action( 'save_post', 'wporg_save_postdata' );

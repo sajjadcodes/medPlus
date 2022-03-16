@@ -43,11 +43,26 @@ $container = get_theme_mod( 'medplus_container_type' );
                 <div class="col-md-2 col-6 text-white">
                     <h4 class="fs-20 fw-normal text-white"><?php esc_html_e("About Us","medplus"); ?></h4>
                     <ul>
-                        <li class="py-2 fs-18 fw-normal clr-gray">Our Mission, Vision and Values</li>
+                        <!-- <li class="py-2 fs-18 fw-normal clr-gray">Our Mission, Vision and Values</li>
                         <li class="py-2 fs-18 fw-normal clr-gray">Transformation</li>
                         <li class="py-2 fs-18 fw-normal clr-gray">Awards</li>
                         <li class="py-2 fs-18 fw-normal clr-gray">Publications & Reports</li>
-                        <li class="py-2 fs-18 fw-normal clr-gray">Policies & Procedures </li>
+                        <li class="py-2 fs-18 fw-normal clr-gray">Policies & Procedures </li> -->
+                        <?php
+										wp_nav_menu(
+											array(
+												'theme_location'  => 'about',
+												// 'container_class' => 'col-md-2 col-6 text-white',
+												'container_id'    => '',
+												// 'menu_class'      => 'px-4 nav-item',
+												'fallback_cb'     => '',
+												'menu_id'         => 'main-menu',
+												// 'items_wrap'      => '',
+												'depth'           => 2,
+												'walker'          => new Medplus_WP_Bootstrap_Navwalker(),
+											)
+										);
+								?>
                     </ul>
                 </div>
 
@@ -63,7 +78,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                         <li class="py-2 fs-18 fw-normal clr-gray">Teeth Whitening </li>
                         <li class="py-2 fs-18 fw-normal clr-gray">Gum Treatment </li>
                         <li class="py-2 fs-18 fw-normal clr-gray">Emergency</li> -->
-                        <?php
+                                <?php
 										wp_nav_menu(
 											array(
 												'theme_location'  => 'services',
