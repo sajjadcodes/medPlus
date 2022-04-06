@@ -16229,8 +16229,8 @@ li > a:hover {
   border: 0.5px solid #d7d5d5 !important;
 }
 
-.datepick-inline .date_available {
-  background-color: green;
+.wpbc_timeslot_day_bg_as_available .datepick-inline .date_available {
+  background-color: #fff;
 }
 
 /* Mobile Button */
@@ -16317,6 +16317,11 @@ li > a:hover {
   color: #1476E1 !important;
 }
 
+.menu-services-container .nav-link,
+.menu-about-us-container .nav-link {
+  color: #fff;
+}
+
 @media (max-width: 1600px) {
   .staff__slider .carousel-control-prev {
     left: 0px;
@@ -16327,6 +16332,10 @@ li > a:hover {
   }
 }
 @media (max-width: 768px) {
+  #appointment {
+    text-align: center;
+  }
+
   .ms-n3 {
     margin: 0px;
   }
@@ -16367,14 +16376,37 @@ li > a:hover {
   .caption h1, .caption .h1 {
     font-size: 26px !important;
   }
+
+  .nav-link {
+    color: white;
+  }
 }
 @media (max-width: 475px) {
+  .nav-link {
+    color: white;
+  }
+
   .staff__slider .carousel-control-prev {
     top: -123px;
   }
 
   .staff__slider .carousel-control-next {
     top: -123px;
+  }
+
+  #appointment {
+    text-align: center;
+  }
+
+  .wpbc_times_selector {
+    position: absolute !important;
+    white-space: normal !important;
+    right: -111% !important;
+    bottom: -167px !important;
+  }
+
+  #about {
+    margin-top: 50px;
   }
 }
 

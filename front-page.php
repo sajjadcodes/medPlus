@@ -86,9 +86,9 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     <button
                                         class="btn-slider clr-text fs-20 fw-semibold w-100 rounded-20 shadow border bg-white"
                                         type="button">
-                                        <img class="img-fluid me-4" src="<?php echo get_template_directory_uri() ?>./assets/images/CapIcon.png"
+                                        <img class="img-fluid me-4" src="<?php echo get_theme_mod( 'medplus_featured_icon_one_setting');?>"
                                             alt="Highly Trained Dentists">
-                                        Highly Trained Dentists
+                                            <?php echo get_theme_mod( 'medplus_hero_freatue_one_text_setting');?>
                                     </button>
                                 </span>
                             </div>
@@ -100,9 +100,9 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     <button
                                         class="btn-slider clr-text fs-20 fw-semibold w-100 rounded-20 shadow border bg-white"
                                         type="button">
-                                        <img class="img-fluid me-4" src="<?php echo get_template_directory_uri() ?>./assets/images/MedalIcon.png"
+                                        <img class="img-fluid me-4" src="<?php echo get_theme_mod( 'medplus_featured_icon_two_setting');?>"
                                             alt="Experienced Doctors">
-                                        Experienced Doctors
+                                            <?php echo get_theme_mod( 'medplus_hero_freatue_two_text_setting');?>
                                     </button>
                                 </span>
                             </div>
@@ -114,9 +114,9 @@ $container = get_theme_mod( 'medplus_container_type' );
                                     <button
                                         class="btn-slider clr-text fs-20 fw-semibold w-100 rounded-20 shadow border bg-white"
                                         type="button">
-                                        <img class="img-fluid me-4" src="<?php echo get_template_directory_uri() ?>./assets/images/CapIcon.png"
+                                        <img class="img-fluid me-4" src="<?php echo get_theme_mod( 'medplus_featured_icon_three_setting');?>"
                                             alt="Highly Trained Dentists">
-                                        Highly Trained Dentistssssssss
+                                            <?php echo get_theme_mod( 'medplus_hero_freatue_three_text_setting');?>
                                     </button>
                                 </span>
                             </div>

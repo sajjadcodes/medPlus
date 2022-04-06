@@ -264,7 +264,7 @@ li > a:hover{
 }
 
 .wpbc_timeslot_day_bg_as_available .datepick-inline .date_available{
-    background-color:green;
+    background-color:#fff;
 }
 
 
@@ -386,7 +386,14 @@ li > a:hover{
     color: #1476E1 !important;
 }
 
+// Footer menu 
 
+.menu-services-container .nav-link ,
+.menu-about-us-container .nav-link{
+    color:#fff;
+}
+
+// mobile nav
 // Bookingform
 @media(max-width: 1600px) {
     .staff__slider .carousel-control-prev{
@@ -395,10 +402,15 @@ li > a:hover{
     .staff__slider .carousel-control-next{
         right:0px;
     }
+
 }
 
 
 @media(max-width: 768px) {
+     // calander
+     #appointment{
+        text-align: center;
+    }
     .ms-n3{
         margin: 0px;
     }
@@ -434,13 +446,34 @@ li > a:hover{
     .caption h1{
         font-size: 26px !important;
     }
+    .nav-link {
+        color:white;
+    }
 }
 @media(max-width: 475px) {
+    .nav-link {
+        color:white;
+    }
     .staff__slider .carousel-control-prev{
         top: -123px;
     }
     .staff__slider .carousel-control-next{
         top: -123px;
     }
+
+    // calander
+    #appointment{
+        text-align: center;
+    }
+    .wpbc_times_selector {
+        position: absolute !important;
+        white-space: normal !important;
+        right: -111% !important;
+        bottom: -167px !important;
+    }
+    #about{
+        margin-top: 50px;
+    }
+
 }
 

@@ -22,16 +22,11 @@ $navbar_type       = get_theme_mod( 'medplus_navbar_type', 'collapse' );
 	<?php wp_head(); ?>
 
 	<!-- medpus -->
-
-
 </head>
-
-
 
 <body <?php body_class(); ?> <?php medplus_body_attributes(); ?>>
 	<?php do_action( 'wp_body_open' ); ?>
     <!-- === **** Section Header *** ===  -->
     <header>
 		<?php get_template_part( 'global-templates/navbar', $navbar_type . '-' . $bootstrap_version ); ?>
-      
     </header>

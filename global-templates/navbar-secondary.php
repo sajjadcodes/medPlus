@@ -94,6 +94,32 @@ defined( 'ABSPATH' ) || exit;
                         <a class="button button--state-active fs-20 fw-bold rounded-10" href="<?php echo esc_url( home_url( '/appointment' ) ); ?>">Make
                             Appointment</a>
                     </form>
+
+                    <!-- mobile -->
+
+                    <div class="mobile__menu d-lg-none d-block">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">
+					<img class="img-fluid" src="<?php echo get_template_directory_uri() ?>/assets/images/side-menu.png" alt="Side Menu Icon">
+                    </span>
+                    <ul class="sidenav bg-dark-blue" id="mySidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <?php
+										wp_nav_menu(
+											array(
+												'theme_location'  => 'primary',
+												'container_class' => 'mobile__menu d-lg-none d-block',
+												'container_id'    => '',
+												'menu_class'      => 'px-4 nav-item',
+												'fallback_cb'     => '',
+												'menu_id'         => 'main-menu',
+												'items_wrap'      => '<ul class="mobile__menu d-lg-none d-block">%3$s</ul>',
+												'depth'           => 2,
+												'walker'          => new Medplus_WP_Bootstrap_Navwalker(),
+											)
+										);
+								?>
+                    </ul>
+                </div>
                 </div>
             </div>
         </nav>

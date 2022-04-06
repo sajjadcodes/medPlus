@@ -34,79 +34,28 @@ $container = get_theme_mod( 'medplus_container_type' );
                 </article>
                 <!-- Photo Gallery (Caption) -->
                 <article class="overflow-hidden pt-4">
-                    <!-- Gallery Tab Buttons -->
-                    <?php
-                                   $termsCPT = get_terms( array(
-                                    'taxonomy' => 'group',
-                                ) );
-
-
-                    ?>
-                    <ul class="nav nav-pills mb-5 justify-content-center" id="pills-tab" role="tablist">
-
-                                    <?php
-                                    
-                                        foreach($termsCPT as $term){
-                                            ?>
-
-                                            <li class="nav-item mx-2" role="presentation">
-                                                <button class="nav-link fs-18 fw-medium" id="<?php echo $term->name; ?>-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#<?php echo $term->name; ?>" type="button" role="tab" aria-controls="<?php echo $term->name; ?>"
-                                                    aria-selected="false"><?php echo $term->name; ?></button>
-                                            </li>
-                                            <?php
-                                        }
-                                        
-                                       
-                                    ?>
-                        
+                    <?php $gallery_groups = get_terms( array( 'taxonomy' => 'group') ); ?>
+                    <ul class="nav nav-pills mb-5 justify-content-center" id="gallery-tabs">
+                        <?php $active =0; ?>
+                        <?php foreach($gallery_groups as $group) : ?>                            
+                            <li class="nav-item mx-2" role="presentation">
+                                <button 
+                                    class="nav-link fs-18 fw-medium <?php echo ($active==0)?"active":" "; ?>" 
+                                    data-gallery-group="<?php echo $group->slug; ?>"
+                                    type="button"><?php echo $group->name; ?></button>
+                            </li>
+                            <?php $active++; ?>
+                        <?php endforeach; ?>
                     </ul>
-                    <!-- Gallery Tab Content -->          
-
-                    <div class="tab-content" id="pills-tabContent">
-
-                        <?php
-                    
-                                        foreach($termsCPT as $term){
-                                            ?>
-                                            <div class="tab-pane fade show active" id="<?php echo $term->name; ?>" role="tabpanel" aria-labelledby="<?php echo $term->name; ?>-tab">
-                                            <div class="gallery">
-                                       <?php 
-                                        }
-                                        ?>
-                                            <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
-                                                           <?php
-                                                                         $args = array(
-                                                                            'post_type'      => 'gallery',
-                                                                            // 'posts_per_page' => 10,
-                                                                            'group'  => $term->name,
-                                                                            'term'      =>$term->name,
-                                                                        );
-                                                                        $galleryQuery= new WP_Query($args);
-
-                                                                while($galleryQuery->have_posts()){
-                                                                    $galleryQuery->the_post();?>
-                                                                <div class="col mb-4">
-                                                                    <a href="<?php the_post_thumbnail_url();?>" data-caption="Image caption">
-                                                                        <img src="<?php the_post_thumbnail_url();?>" alt="First image" class="img-fluid mb-4">
-                                                                    </a>
-                                                                    <a href="<?php the_post_thumbnail_url();?>">
-                                                                        <img src="<?php the_post_thumbnail_url();?>" alt="Second image" class="img-fluid mb-4">
-                                                                    </a>
-                                                               </div>
-
-
-                                                                    <?php
-                                                                }
-                                                                wp_reset_postdata();
-
-                                                           ?>
-                                                </div>
-                                            </div>
-                                        </div>
-     
+                    <div class="gallery-items" id="gallery-tabs-content">
+                   
+                         <div class="gallery">
+                            <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4" id="gallery-images">
+                            
+                            </div>
+                         </div>
+                            
                     </div>
-                    <!-- <div id="overlay"></div> -->
                     <div class="container readmore text-center p-4 ">
                         <h2 class="fs-18 readmore__btn--line"><?php esc_html_e('Read More','medplus');?></h2>
                     </div>
@@ -117,23 +66,36 @@ $container = get_theme_mod( 'medplus_container_type' );
     </main>
 
 
+                 <div class="gallery">
+                                <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
 
-
-
-
-    <script src="<?php echo get_template_directory_uri() ?>./assets/js/baguetteBox.min.js" async></script>
- 
-    <script>
-        window.addEventListener('load', function() {
-          baguetteBox.run('.gallery');
-        });
-        baguetteBox.run('.gallery', {
-            buttons:'auto',
-            fullScreen:true,
-           
-        });
-        </script>
-
+                                            <div class="col mb-4">
+                                                <a href="./assets/images/medical-1.png" data-caption="Image caption">
+                                                    <img src="./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
+                                                </a>
+                                                
+                                            </div>
+                                            <div class="col mb-4">
+                                                <a href="./assets/images/service-1.png" data-caption="Image caption">
+                                                    <img src="./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
+                                                </a>
+                                                <a href="./assets/images/service-2.png">
+                                                    <img src="./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
+                                                </a>
+                                            </div>
+                                            <div class="col mb-4">
+                                                <a href="./assets/images/treatment.png" data-caption="Image caption">
+                                                    <img src="./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
+                                                </a>
+                                                <a href="./assets/images/medical-2.png">
+                                                    <img src="./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
+                                                </a>
+                                            </div>
+                       
+                                </div>
+                            </div>
 <?php
+
+
 
 get_footer();

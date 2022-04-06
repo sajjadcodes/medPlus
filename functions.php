@@ -47,8 +47,56 @@ foreach ( $medplus_includes as $file ) {
 }
 
 
+function medplus_ajax(){
+
+    wp_register_script('medplus_ajax',get_template_directory_uri() . '/js/medplus-ajax.js', array('jquery'), '', true);
+	wp_enqueue_script( 'medplus_ajax');
+    wp_localize_script( 'medplus_ajax', 'GalleryGroup', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));  
+}
+add_action( 'wp_enqueue_scripts', 'medplus_ajax' );
 
 
+// wp_localize_script( 'test_script', 'GalleryGroup', array( 'galleryurl' => admin_url( 'admin-ajax.php' ))); 
+
+
+
+add_action( 'wp_ajax_nopriv_gallery_group', 'medplus_gallery_group' );
+add_action( 'wp_ajax_gallery_group', 'medplus_gallery_group' );
+
+function medplus_gallery_group() {
+   $galleryGroup = $_POST['galleryGroup'];
+        $args = array(
+            'posts_per_page' => -1,
+            'post_type' => 'gallery',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'group',
+                    'field'    => 'slug',
+                    'terms'    => $galleryGroup,
+                ),
+            ),
+        );
+        $query = new WP_Query($args);
+        if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                    $query->the_post();
+                    ?>
+                         <div class="col mb-4">
+                         <a href="<?php the_post_thumbnail_url();?>" data-caption="Image caption">
+                                <img src="<?php the_post_thumbnail_url();?>" alt="First image" class="img-fluid mb-4">
+                            </a>         
+                        </div>
+                <?php
+                }
+        } 
+        else {
+            echo"<h3>No.Gallery Found</h3>";
+        }
+
+        die();
+    
+
+}
 
 // post views count at front end
 

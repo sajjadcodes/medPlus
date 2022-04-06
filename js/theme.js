@@ -4,8 +4,8 @@
   * Licensed under GPL (http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
   */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery'), require('aos_scripts')) :
-	typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'aos_scripts'], factory) :
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery')) :
+	typeof define === 'function' && define.amd ? define(['exports', 'jquery'], factory) :
 	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.understrap = {}, global.jQuery));
 })(this, (function (exports, $) { 'use strict';
 
@@ -9300,9 +9300,7 @@
 	  }
 	})();
 
-	// import AOS from "./aos"
-	// AOS.init();
-
+	AOS.init();
 	$__default["default"](document).ready(function () {
 	  // active and inactive menu items
 	  $__default["default"]('ul li a').click(function () {
@@ -9334,30 +9332,31 @@
 	      }
 	    });
 	  }
-	});
-	$__default["default"]('.testimonial__slider').slick({
-	  speed: 300,
-	  slidesToShow: 2,
-	  slidesToScroll: 1,
-	  autoplay: false,
-	  arrows: false,
-	  dots: false,
-	  responsive: [{
-	    breakpoint: 900,
-	    settings: {
-	      slidesToShow: 1,
-	      slidesToScroll: 1
+
+	  $__default["default"]('.testimonial__slider').slick({
+	    speed: 300,
+	    slidesToShow: 2,
+	    slidesToScroll: 1,
+	    autoplay: false,
+	    arrows: false,
+	    dots: false,
+	    responsive: [{
+	      breakpoint: 900,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    }]
+	  });
+	  $__default["default"](document).on('click', '.branch_address', function () {
+	    if ($__default["default"]('#branch_address_form_field').length) {
+	      $__default["default"]('#branch_address_form_field').val($__default["default"](this).attr('data-id'));
+	    } else {
+	      $__default["default"]('#booking_form1').append("<input type='hidden' name='branch_address_form_field' id='branch_address_form_field'>");
+	      $__default["default"]('#branch_address_form_field').val($__default["default"](this).attr('data-id'));
 	    }
-	  }]
+	  });
 	});
-	$__default["default"](document).on('click', '.branch_address', function () {
-	  if ($__default["default"]('#branch_address_form_field').length) {
-	    $__default["default"]('#branch_address_form_field').val($__default["default"](this).attr('data-id'));
-	  } else {
-	    $__default["default"]('#booking_form1').append("<input type='hidden' name='branch_address_form_field' id='branch_address_form_field'>");
-	    $__default["default"]('#branch_address_form_field').val($__default["default"](this).attr('data-id'));
-	  }
-	}); //mySidenav
 
 	exports.Alert = alert;
 	exports.Button = button;

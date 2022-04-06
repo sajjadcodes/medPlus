@@ -21,11 +21,6 @@ $navbar_type       = get_theme_mod( 'medplus_navbar_type', 'collapse' );
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
-
-	<!-- medpus -->
-
-
-
     <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,15 +28,10 @@ $navbar_type       = get_theme_mod( 'medplus_navbar_type', 'collapse' );
 
     <title><?php bloginfo('title');?></title>
 </head>
-
-
 </head>
-
 <body <?php body_class(); ?> <?php medplus_body_attributes(); ?>>
 	<?php do_action( 'wp_body_open' ); ?>
-
     <header class="bg-dark-blue">
-  
         <?php
          get_template_part( 'global-templates/navbar', 'secondary' ); 
         ?>
