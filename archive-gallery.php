@@ -18,8 +18,6 @@ get_header('secondary');
 $container = get_theme_mod( 'medplus_container_type' );
 ?>
 
-
-
 <main>
         <!-- === **** Photo Gallery *** ===  -->
         <section class="photo__gallery my-5" id="">
@@ -51,7 +49,7 @@ $container = get_theme_mod( 'medplus_container_type' );
                    
                          <div class="gallery">
                             <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4" id="gallery-images">
-                            
+                                   
                             </div>
                          </div>
                             
@@ -66,34 +64,7 @@ $container = get_theme_mod( 'medplus_container_type' );
     </main>
 
 
-                 <div class="gallery">
-                                <div class="row row-cols-1 row-cols-lg-4 g-2 g-lg-4">
-
-                                            <div class="col mb-4">
-                                                <a href="./assets/images/medical-1.png" data-caption="Image caption">
-                                                    <img src="./assets/images/medical-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="./assets/images/service-1.png" data-caption="Image caption">
-                                                    <img src="./assets/images/service-1.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="./assets/images/service-2.png">
-                                                    <img src="./assets/images/service-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                                            <div class="col mb-4">
-                                                <a href="./assets/images/treatment.png" data-caption="Image caption">
-                                                    <img src="./assets/images/treatment.png" alt="First image" class="img-fluid mb-4">
-                                                </a>
-                                                <a href="./assets/images/medical-2.png">
-                                                    <img src="./assets/images/medical-2.png" alt="Second image" class="img-fluid mb-4">
-                                                </a>
-                                            </div>
-                       
-                                </div>
-                            </div>
+                
 <?php
 
 

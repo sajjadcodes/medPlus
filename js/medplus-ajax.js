@@ -10,6 +10,7 @@
             data :{action: "gallery_group",galleryGroup},
             success: function(response) {
                 $('#gallery-images').html(response);
+                baguetteBox.run('.gallery');
             }
          })   
 
@@ -25,7 +26,8 @@
             data :{action: "gallery_group",galleryGroup},
             success: function(response) {
                 console.log(response);
-                // $('#gallery-images').html(response);
+                $('#gallery-images').html(response);
+                baguetteBox.run('.gallery');
             }
          })   
 
@@ -40,7 +42,6 @@ window.addEventListener('load', function() {
 baguetteBox.run('.gallery', {
     buttons:'auto',
     fullScreen:true,
-    
 });
 
 

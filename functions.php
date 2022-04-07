@@ -77,12 +77,12 @@ function medplus_gallery_group() {
             ),
         );
         $query = new WP_Query($args);
-        if ($query->have_posts()) {
-                while ($query->have_posts()) {
+        if ( $query->have_posts() ) {
+                while ( $query->have_posts() ) {
                     $query->the_post();
                     ?>
                          <div class="col mb-4">
-                         <a href="<?php the_post_thumbnail_url();?>" data-caption="Image caption">
+                            <a href="<?php the_post_thumbnail_url();?>" data-caption="Image caption">
                                 <img src="<?php the_post_thumbnail_url();?>" alt="First image" class="img-fluid mb-4">
                             </a>         
                         </div>
